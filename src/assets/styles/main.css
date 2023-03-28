@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ffffff;
+  --secondary: #21a7ff;
+  --font-family: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+body {
+  font-size: 14px;
+  font-family: var(--font-family);
+}
