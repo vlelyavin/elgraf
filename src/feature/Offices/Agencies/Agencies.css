@@ -1,0 +1,83 @@
+.agencies {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.agencies__title {
+  font-size: 2.2rem;
+  margin: 60px 0 0 0;
+}
+
+.agencies__row {
+  display: flex;
+}
+
+.agencies__column {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.agencies__column__block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px;
+}
+
+.agencies__column__block__title {
+  font-weight: 600;
+}
+
+.agencies__column__block__text {
+  position: relative;
+  padding: 0 0 0 25px;
+}
+
+.agencies__column__block__text::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  left: 0px;
+  top: 0;
+}
+
+.agencies__image__container {
+  width: 100%;
+  height: 550px;
+  margin: 80px 0;
+}
+
+.agencies__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.doublelocation::before {
+  background: url(../../../assets/images/icons/doubleLocationIcon.svg) no-repeat center center / contain;
+}
+
+.location::before {
+  background: url(../../../assets/images/icons/locationIcon.svg) no-repeat center center / contain;
+}
+
+.company::before {
+  background: url(../../../assets/images/icons/companyIcon.svg) no-repeat center center / contain;
+}
+
+.person::before {
+  background: url(../../../assets/images/icons/personIcon.svg) no-repeat center center / contain;
+}
+
+.mail::before {
+  background: url(../../../assets/images/icons/mailIcon.svg) no-repeat center center / contain;
+}
+
+.phone::before {
+  background: url(../../../assets/images/icons/phoneIcon.svg) no-repeat center center / contain;
+}

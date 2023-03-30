@@ -1,0 +1,42 @@
+.process {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+.process__title {
+  font-size: 2.2rem;
+  margin: 70px 0 40px;
+}
+
+.process__column__description {
+  font-size: 1.1rem;
+}
+
+.process__row {
+  display: flex;
+  gap: 30px;
+}
+
+.process__column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.process__column__image__container {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.process__column__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.process__column__title {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}

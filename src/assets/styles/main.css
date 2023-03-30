@@ -6,8 +6,9 @@
 
 :root {
   --primary: #ffffff;
-  --secondary: #21a7ff;
+  --secondary: #0090fa;
   --font-family: "Montserrat";
+  --black: #000000;
 }
 
 a {
@@ -15,7 +16,19 @@ a {
   color: initial;
 }
 
+a,
+button,
+input,
 body {
-  font-size: 14px;
   font-family: var(--font-family);
+}
+
+html {
+  font-size: 15px;
+  color: var(--primary);
+  scroll-behavior: smooth;
+}
+
+.semibold {
+  font-weight: 600;
 }

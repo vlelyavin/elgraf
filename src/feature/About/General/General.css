@@ -1,0 +1,39 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  padding: 200px 0 0 0;
+  color: var(--black);
+  gap: 70px;
+}
+
+.general__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.general__column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 55%;
+}
+
+.general__column__title {
+  font-size: 2.2rem;
+}
+
+.general__column__text {
+  font-size: 1.1rem;
+}
+
+.general__column__image__container {
+  width: 40%;
+  height: auto;
+}
+
+.general__column__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
