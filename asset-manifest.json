@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.896994de.css",
-    "main.js": "/elgraf/static/js/main.b53c5001.js",
+    "main.css": "/elgraf/static/css/main.6d3f15d2.css",
+    "main.js": "/elgraf/static/js/main.92d6cc24.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
     "static/media/2.png": "/elgraf/static/media/2.13c8f89afec5c355066f.png",
-    "static/media/4.png": "/elgraf/static/media/4.2119956a30107de767c7.png",
     "static/media/17.png": "/elgraf/static/media/17.4fc5110b0630f2f1d43b.png",
-    "static/media/10.png": "/elgraf/static/media/10.8d9c2863bf537518c2e7.png",
+    "static/media/4.png": "/elgraf/static/media/4.73a996b9bbc03e3831b6.png",
+    "static/media/10.png": "/elgraf/static/media/10.3f835922c184a7410e8f.png",
     "static/media/product.png": "/elgraf/static/media/product.a83ef7044967224d351c.png",
-    "static/media/9.png": "/elgraf/static/media/9.fe8f75682427e4c2e122.png",
-    "static/media/5.png": "/elgraf/static/media/5.f9f9eb4773b96e975b21.png",
-    "static/media/3.png": "/elgraf/static/media/3.0563d7388183602f7e1c.png",
+    "static/media/9.png": "/elgraf/static/media/9.8ee56bcf8232c7aafa54.png",
+    "static/media/5.png": "/elgraf/static/media/5.f5f94037376b5fe42ab1.png",
     "static/media/map.png": "/elgraf/static/media/map.379cadff2b4340bcd141.png",
     "static/media/slider__first.png": "/elgraf/static/media/slider__first.eb29f815842583521fdf.png",
     "static/media/slider__second.png": "/elgraf/static/media/slider__second.7f5523fd52d7c45481b3.png",
@@ -20,13 +19,14 @@
     "static/media/production.png": "/elgraf/static/media/production.def7224c297d62102bb0.png",
     "static/media/14.png": "/elgraf/static/media/14.03617e76fcf5c825c32d.png",
     "static/media/elgraf.png": "/elgraf/static/media/elgraf.fe0b2a89ea969a4be49a.png",
-    "static/media/7.png": "/elgraf/static/media/7.f5f94037376b5fe42ab1.png",
+    "static/media/7.png": "/elgraf/static/media/7.fe8f75682427e4c2e122.png",
     "static/media/clients.png": "/elgraf/static/media/clients.e783ff99c97c2d9747bc.png",
     "static/media/13.png": "/elgraf/static/media/13.7bed7fcbbe396189d4d1.png",
     "static/media/8.png": "/elgraf/static/media/8.b10822a7b6991c3e94c5.png",
     "static/media/12.png": "/elgraf/static/media/12.34bf343f9402561ecc8a.png",
+    "static/media/3.png": "/elgraf/static/media/3.0563d7388183602f7e1c.png",
     "static/media/productBackground.png": "/elgraf/static/media/productBackground.22844c62055f7fc4a698.png",
-    "static/media/6.png": "/elgraf/static/media/6.81044f409ed0df52e947.png",
+    "static/media/6.png": "/elgraf/static/media/6.7906e3daad9b6eae8b23.png",
     "static/media/paintLab.png": "/elgraf/static/media/paintLab.84b9a108542235567d9e.png",
     "static/media/logo.svg": "/elgraf/static/media/logo.a2bda09fce79014fecca9a27463c0bbc.svg",
     "static/media/15.png": "/elgraf/static/media/15.f4990f23d4baed6977b4.png",
@@ -62,6 +62,7 @@
     "static/media/slick.woff": "/elgraf/static/media/slick.295183786cd8a1389865.woff",
     "static/media/phoneIcon.svg": "/elgraf/static/media/phoneIcon.f674195e339816107e95d6ef6c7804b0.svg",
     "static/media/linkedinIcon.svg": "/elgraf/static/media/linkedinIcon.bda86b203a1b5709724032a8b9935697.svg",
+    "static/media/lock.svg": "/elgraf/static/media/lock.77bfbdcf9130bfe427c4.svg",
     "static/media/locationIcon.svg": "/elgraf/static/media/locationIcon.dd8a336aa023577a6176188178b87464.svg",
     "static/media/emailIcon.svg": "/elgraf/static/media/emailIcon.99740a57bdb680ab7266806a8b58760d.svg",
     "static/media/colorfill.svg": "/elgraf/static/media/colorfill.0ce5e98eaf0731b8c5f834741dd8892d.svg",
@@ -73,11 +74,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.896994de.css.map": "/elgraf/static/css/main.896994de.css.map",
-    "main.b53c5001.js.map": "/elgraf/static/js/main.b53c5001.js.map"
+    "main.6d3f15d2.css.map": "/elgraf/static/css/main.6d3f15d2.css.map",
+    "main.92d6cc24.js.map": "/elgraf/static/js/main.92d6cc24.js.map"
   },
   "entrypoints": [
-    "static/css/main.896994de.css",
-    "static/js/main.b53c5001.js"
+    "static/css/main.6d3f15d2.css",
+    "static/js/main.92d6cc24.js"
   ]
 }
