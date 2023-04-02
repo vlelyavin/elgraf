@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.6d3f15d2.css",
-    "main.js": "/elgraf/static/js/main.92d6cc24.js",
+    "main.css": "/elgraf/static/css/main.e8831b94.css",
+    "main.js": "/elgraf/static/js/main.77af6c3a.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
     "static/media/2.png": "/elgraf/static/media/2.13c8f89afec5c355066f.png",
     "static/media/17.png": "/elgraf/static/media/17.4fc5110b0630f2f1d43b.png",
     "static/media/4.png": "/elgraf/static/media/4.73a996b9bbc03e3831b6.png",
+    "static/media/product.png": "/elgraf/static/media/product.eed5715d1d09df2cefbd.png",
     "static/media/10.png": "/elgraf/static/media/10.3f835922c184a7410e8f.png",
-    "static/media/product.png": "/elgraf/static/media/product.a83ef7044967224d351c.png",
     "static/media/9.png": "/elgraf/static/media/9.8ee56bcf8232c7aafa54.png",
     "static/media/5.png": "/elgraf/static/media/5.f5f94037376b5fe42ab1.png",
-    "static/media/map.png": "/elgraf/static/media/map.379cadff2b4340bcd141.png",
     "static/media/slider__first.png": "/elgraf/static/media/slider__first.eb29f815842583521fdf.png",
     "static/media/slider__second.png": "/elgraf/static/media/slider__second.7f5523fd52d7c45481b3.png",
     "static/media/slider__third.png": "/elgraf/static/media/slider__third.c53a650c940d49323d2b.png",
@@ -28,8 +27,10 @@
     "static/media/productBackground.png": "/elgraf/static/media/productBackground.22844c62055f7fc4a698.png",
     "static/media/6.png": "/elgraf/static/media/6.7906e3daad9b6eae8b23.png",
     "static/media/paintLab.png": "/elgraf/static/media/paintLab.84b9a108542235567d9e.png",
-    "static/media/logo.svg": "/elgraf/static/media/logo.a2bda09fce79014fecca9a27463c0bbc.svg",
+    "static/media/largeLogo.svg": "/elgraf/static/media/largeLogo.6f4450b73c8700f259ffa45dbe30bb75.svg",
     "static/media/15.png": "/elgraf/static/media/15.f4990f23d4baed6977b4.png",
+    "static/media/logo.svg": "/elgraf/static/media/logo.2f965d7e17fc15fd9a913cfd768cae63.svg",
+    "static/media/smallLogo.svg": "/elgraf/static/media/smallLogo.a2bda09fce79014fecca9a27463c0bbc.svg",
     "static/media/11.png": "/elgraf/static/media/11.0bbc797beaf69ab62ae2.png",
     "static/media/16.png": "/elgraf/static/media/16.aae3e5637ca8d61e8146.png",
     "static/media/raw.png": "/elgraf/static/media/raw.fff1ac28d70122d2ac7d.png",
@@ -42,7 +43,10 @@
     "static/media/benefitsFirst.png": "/elgraf/static/media/benefitsFirst.128b36b2a1de51669016.png",
     "static/media/certificateISO.png": "/elgraf/static/media/certificateISO.9c160df9abc297d45bb5.png",
     "static/media/differentNeeds.png": "/elgraf/static/media/differentNeeds.573a413b24d479d5f89c.png",
+    "static/media/paintLabMobile.png": "/elgraf/static/media/paintLabMobile.401d162f82434fcd1c90.png",
     "static/media/shoes.png": "/elgraf/static/media/shoes.5cc7f2c9098c0542caab.png",
+    "static/media/rawMobile.png": "/elgraf/static/media/rawMobile.fed3cb605c4659e20e30.png",
+    "static/media/stampingFormsMobile.png": "/elgraf/static/media/stampingFormsMobile.5d212eb83205f6f3b242.png",
     "static/media/aboutBackground.png": "/elgraf/static/media/aboutBackground.aa52df5ec2f26c7f54b8.png",
     "static/media/industrialgoods.png": "/elgraf/static/media/industrialgoods.923d9704a7e13c3a39ad.png",
     "static/media/childrengoods.png": "/elgraf/static/media/childrengoods.3d4812fb61d88cd419b9.png",
@@ -74,11 +78,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.6d3f15d2.css.map": "/elgraf/static/css/main.6d3f15d2.css.map",
-    "main.92d6cc24.js.map": "/elgraf/static/js/main.92d6cc24.js.map"
+    "main.e8831b94.css.map": "/elgraf/static/css/main.e8831b94.css.map",
+    "main.77af6c3a.js.map": "/elgraf/static/js/main.77af6c3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d3f15d2.css",
-    "static/js/main.92d6cc24.js"
+    "static/css/main.e8831b94.css",
+    "static/js/main.77af6c3a.js"
   ]
 }
