@@ -1,0 +1,49 @@
+.menu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: var(--secondary);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 4;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  transform: translateY(-110%);
+  transition: transform 0.3s;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.menu__link {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.menu__lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu__button__container {
+  max-width: 400px;
+  width: 100%;
+}
+.menulocale {
+  width: 50px;
+}
+
+@media screen and (max-width: 1050px) {
+  .menu {
+    display: flex;
+  }
+}

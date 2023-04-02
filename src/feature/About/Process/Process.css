@@ -31,6 +31,7 @@
 }
 
 .process__column__image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -39,4 +40,41 @@
 .process__column__title {
   margin: 20px 0;
   font-size: 1.5rem;
+}
+
+.process__column__image__mobile {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .process {
+    margin: 40px 0 0 0;
+  }
+  .process__title {
+    display: none;
+  }
+  .process__row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .process__column {
+    max-width: 500px;
+    width: 100%;
+  }
+  .process__column__image {
+    display: none;
+  }
+  .process__column__image__container {
+    height: 100px;
+  }
+
+  .process__column__image__mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .process__column__description {
+    font-size: 1rem;
+  }
 }

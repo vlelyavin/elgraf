@@ -7,7 +7,7 @@ import { Process } from "../../feature/About/Process";
 export const About = () => {
   return (
     <>
-      <Header buttonBackground="var(--primary)" buttonColor="var(--black)" />
+      <Header />
       <General />
       <Process />
       <Certificates />

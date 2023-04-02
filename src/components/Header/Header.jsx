@@ -2,21 +2,55 @@ import { Container } from "../Container";
 import { Link, useLocation } from "react-router-dom";
 import { ROUTES } from "../../constants/routes";
 import { Button } from "../Button";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { SET_LOCALE } from "../../constants/actionTypes";
+import { FormattedMessage } from "react-intl";
+import { Menu } from "../../feature/Header/Menu";
 import emailIcon from "../../assets/images/header/emailIcon.svg";
 import phoneIcon from "../../assets/images/header/phoneIcon.svg";
 import linkedinIcon from "../../assets/images/header/linkedinIcon.svg";
 import facebookIcon from "../../assets/images/header/facebookIcon.svg";
 import instagramIcon from "../../assets/images/header/instagramIcon.svg";
-import logo from "../../assets/images/header/logo.svg";
+import smallLogo from "../../assets/images/icons/smallLogo.svg";
+import logo from "../../assets/images/icons/logo.svg";
 import classNames from "classnames";
+
 import "./Header.css";
 
 export const Header = ({ background, buttonBackground, buttonColor }) => {
+  const firstLine = useRef();
+  const secondLine = useRef();
+  const thirdLine = useRef();
+  const [isMenuVisible, toggleMenuVisibility] = useState(false);
+  const locale = useSelector((state) => state.locale);
+  const dispatch = useDispatch();
   const [activeLink, setActiveLink] = useState(0);
   const location = useLocation();
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleMenuClick = () => {
+    toggleMenuVisibility(!isMenuVisible);
+  };
+
   useEffect(() => {
+    if (isMenuVisible) {
+      firstLine.current.style.transform = "rotate(45deg) translate(7px, 7px)";
+      secondLine.current.style.opacity = "0";
+      thirdLine.current.style.transform = "rotate(-45deg) translate(7px, -7px)";
+    } else {
+      firstLine.current.style.transform = "rotate(0) translate(0)";
+      secondLine.current.style.opacity = "1";
+      thirdLine.current.style.transform = "rotate(0) translate(0)";
+    }
+  }, [isMenuVisible]);
+
+  const handleValueChange = (event) => {
+    dispatch({ type: SET_LOCALE, payload: event.target.value });
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
     if (location.pathname === ROUTES.products) {
       setActiveLink(1);
     } else if (location.pathname === ROUTES.about) {
@@ -24,6 +58,9 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
     } else if (location.pathname === ROUTES.offices) {
       setActiveLink(3);
     } else setActiveLink(4);
+  }, [location.pathname]);
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("touchmove", handleScroll, { passive: true });
     return () => {
@@ -31,10 +68,6 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
       window.removeEventListener("touchmove", handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
 
   const handleScroll = () => {
     setScrollPosition(window.pageYOffset);
@@ -52,7 +85,9 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
               <p className="header__info__item__line__text">info@elgrafpack.com</p>
             </div>
             <div className="header__info__item__line">
-              <p className="header__info__item__line__title">Для замовлення:</p>
+              <p className="header__info__item__line__title">
+                <FormattedMessage id="header.toOrder" />
+              </p>
               <p className="header__info__item__line__text">info@elgrafpack.com</p>
             </div>
           </div>
@@ -85,7 +120,7 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
                 className="header__nav__link"
                 style={{ opacity: activeLink === 1 ? "1" : "0.8" }}
               >
-                Продукція
+                <FormattedMessage id="production" />
               </Link>
               <Link
                 to={ROUTES.about}
@@ -93,7 +128,7 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
                 className="header__nav__link"
                 style={{ opacity: activeLink === 2 ? "1" : "0.8" }}
               >
-                Про нас
+                <FormattedMessage id="aboutUs" />
               </Link>
               <Link
                 to={ROUTES.offices}
@@ -101,7 +136,7 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
                 style={{ opacity: activeLink === 3 ? "1" : "0.8" }}
                 className="header__nav__link"
               >
-                Діючі представництва та як стати партнером
+                <FormattedMessage id="representatives" />
               </Link>
               <Link
                 to={ROUTES.initial}
@@ -110,17 +145,51 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
                 className="header__nav__link"
               >
                 <div className="header__logo__container">
-                  <img src={logo} alt="logo" className="header__logo" />
+                  <img src={smallLogo} alt="smallLogo" className="header__logo" />
                 </div>
               </Link>
             </nav>
             <div className="header__right">
-              <div className="header__locales">UA</div>
-              <Button title="Оформити замовлення" background={buttonBackground} color={buttonColor} />
+              <select className="header__locales" value={locale} onChange={handleValueChange}>
+                <option defaultValue className="header__locale__option" value="ua">
+                  UA
+                </option>
+                <option defaultValue className="header__locale__option" value="ru">
+                  RU
+                </option>
+                <option className="header__locale__option" value="us">
+                  US
+                </option>
+              </select>
+              <Link to={ROUTES.order}>
+                <Button
+                  title={<FormattedMessage id="button.order" />}
+                  background={buttonBackground}
+                  color={buttonColor}
+                />
+              </Link>
             </div>
           </div>
         </Container>
       </header>
+      <header className="header__mobile">
+        <Link to={ROUTES.initial} className="header__mobile__logo__container" onClick={() => setActiveLink(4)}>
+          <img src={logo} alt="logo" className="header__mobile__logo" />
+        </Link>
+        <div className="header__mobile__menu__container" onClick={handleMenuClick}>
+          <div className="header__menu__line" ref={firstLine}></div>
+          <div className="header__menu__line" ref={secondLine}></div>
+          <div className="header__menu__line" ref={thirdLine}></div>
+          {/* <img src={menu} alt="menu" className="header__mobile__menu" /> */}
+        </div>
+      </header>
+      <Menu
+        isMenuVisible={isMenuVisible}
+        activeLink={activeLink}
+        setActiveLink={setActiveLink}
+        locale={locale}
+        handleValueChange={handleValueChange}
+      />
     </>
   );
 };

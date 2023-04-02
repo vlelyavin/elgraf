@@ -6,32 +6,42 @@ import shoes from "../../../assets/images/packaging/shoes.png";
 import alcoholgoods from "../../../assets/images/packaging/alcoholgoods.png";
 import transporting from "../../../assets/images/packaging/transporting.png";
 import exhibition from "../../../assets/images/packaging/exhibition.png";
-import showboxes from "../../../assets/images/packaging/transporting.png";
+import showboxes from "../../../assets/images/packaging/showboxes.png";
 import "./Packaging.css";
+import { FormattedMessage } from "react-intl";
+import { ROUTES } from "../../../constants/routes";
+import { Link } from "react-router-dom";
 
 export const Packaging = () => {
   const items = [
-    { title: "Харчових товарів (лотки)", src: tray },
-    { title: "Дитячих товарів", src: childrengoods },
-    { title: "Промислових товарів", src: industrialgoods },
-    { title: "Взуття", src: shoes },
-    { title: "Алкогольних та інших напоїв", src: alcoholgoods },
-    { title: "Транспортування (bag in box)", src: transporting },
-    { title: "Виставок", src: exhibition },
-    { title: "Дисплеїв - show box", src: showboxes },
+    { title: <FormattedMessage id="packaging.trays" />, src: tray, background: "#FFB919" },
+    { title: <FormattedMessage id="packaging.childrenGoods" />, src: childrengoods, background: "#B1D036" },
+    { title: <FormattedMessage id="packaging.industrialGoods" />, src: industrialgoods, background: "#21A7FF" },
+    { title: <FormattedMessage id="packaging.shoes" />, src: shoes, background: "#366BD0" },
+    { title: <FormattedMessage id="packaging.alcoholGoods" />, src: alcoholgoods, background: "#366BD0" },
+    {
+      title: <FormattedMessage id="packaging.transport" />,
+      src: transporting,
+      background: "#6E9913",
+    },
+    { title: <FormattedMessage id="packaging.exhibition" />, src: exhibition, background: "#FFB919" },
+    { title: <FormattedMessage id="packaging.displays" />, src: showboxes, background: "#B1D036" },
   ];
   return (
     <Container>
       <section className="packaging">
-        <h1 className="packaging__title">Ми виготовляємо упаковки для:</h1>
+        <h1 className="packaging__title">
+          <FormattedMessage id="packaging.title" />
+          {/* Ми виготовляємо упаковки для: */}
+        </h1>
         <div className="packaging__items">
           {items.map((item, id) => (
-            <div className="packaging__item" key={id}>
+            <Link to={ROUTES.products} className="packaging__item" key={id} style={{ background: item.background }}>
               <div className="packaging__item__image__container">
                 <img src={item.src} alt="itemImage" className="packaging__item__image" />
               </div>
               <p className="packaging__item__title">{item.title}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

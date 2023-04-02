@@ -1,23 +1,43 @@
 {
   "name": "elgraf",
   "version": "0.1.0",
+  "homepage": "https://vlelyavin.github.io/elgraf",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "@formatjs/intl-numberformat": "^8.3.5",
+    "@formatjs/intl-utils": "^3.8.4",
+    "@react-google-maps/api": "^2.18.1",
+    "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "classnames": "^2.3.2",
+    "emailjs": "^4.0.1",
+    "gh-pages": "^5.0.0",
+    "intl": "^1.2.5",
     "react": "^18.2.0",
+    "react-alice-carousel": "^2.7.1",
     "react-dom": "^18.2.0",
+    "react-glide": "^4.1.0",
+    "react-id-swiper": "^4.0.0",
+    "react-intl": "^6.3.2",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "redux-persist": "^6.0.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^9.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

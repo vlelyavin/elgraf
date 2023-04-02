@@ -1,0 +1,99 @@
+.order__container {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(11px);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 180px;
+  background: white;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+}
+
+.order__title {
+  font-size: 2.2rem;
+}
+
+.order__inputs {
+  margin: 45px 0 28px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order__textarea {
+  height: 400px;
+  width: 100%;
+  padding: 20px 30px;
+  font-size: 1rem;
+  background: #f7f7f7;
+  border-radius: 20px;
+  font-weight: 600;
+  border: none;
+  resize: none;
+}
+
+.order__textarea:focus {
+  outline: none;
+}
+
+.order__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 30px;
+}
+
+.order__security {
+  position: relative;
+  padding: 0 0 0 30px;
+}
+
+.order__input__container {
+  width: 250px;
+}
+
+.order__security::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -2px;
+  width: 18px;
+  height: 20px;
+  background: url(../../../assets/images/icons/lock.svg) no-repeat center center / contain;
+}
+
+@media screen and (max-width: 1050px) {
+  .order {
+    padding: 50px 120px;
+  }
+  .order__title {
+    font-size: 1.8rem;
+  }
+  .order__inputs {
+    margin: 30px 0 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .order {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .order__buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

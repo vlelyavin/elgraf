@@ -1,0 +1,21 @@
+.input {
+  border: none;
+  width: 100%;
+  background: #f7f7f7;
+  border-radius: 72px;
+  font-weight: 600;
+  padding: 20px 30px;
+  font-size: 1rem;
+  color: var(--black);
+}
+
+.input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 800px) {
+  .input {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}

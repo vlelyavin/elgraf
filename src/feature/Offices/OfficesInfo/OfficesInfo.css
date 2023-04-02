@@ -45,7 +45,7 @@
 }
 
 .offices__contacts__title {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .offices__contacts__email,
@@ -71,4 +71,62 @@
   width: 20px;
   height: 20px;
   background: url("../../../assets/images/icons/phoneIcon.svg") no-repeat center center / contain;
+}
+
+.offices__contacts__mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .offices__title {
+    font-size: 1.8rem;
+  }
+  .offices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 0 0;
+  }
+  .offices__info {
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    font-size: 0.9rem;
+  }
+  .offices__description {
+    text-align: center;
+  }
+  .offices__location {
+    max-width: unset;
+  }
+
+  .offices__contacts {
+    display: none;
+  }
+
+  .offices__contacts__mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .offices__contacts__mobile__block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .offices__contacts__mobile__line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 30px;
+    gap: 8px;
+  }
+
+  .offices__contacts__email {
+    margin: 0 30px 0 0;
+  }
 }

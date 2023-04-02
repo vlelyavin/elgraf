@@ -1,8 +1,8 @@
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { MainProduct } from "../../components/MainProduct";
-import { ProductList } from "../../feature/Main/Products/ProductList";
-
+import { OrderForm } from "../../feature/Order/OrderForm";
+import { ProductList } from "../../feature/Products/ProductList";
 export const Products = () => {
   return (
     <section
@@ -10,10 +10,11 @@ export const Products = () => {
         background: "#f6f6f6",
       }}
     >
-      <Header background="#f6f6f6" buttonBackground="var(--primary)" buttonColor="var(--black)" />
+      <Header background="#f6f6f6" />
       <ProductList />
       <MainProduct />
       <Footer />
+      <OrderForm />
     </section>
   );
 };

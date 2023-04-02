@@ -1,0 +1,38 @@
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+.slick-slider {
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.slick-slide div {
+  width: 250px;
+  height: 230px;
+}
+
+.slick-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  padding: 0 10px;
+}
+
+.slick-arrow {
+  visibility: hidden;
+  opacity: 0;
+  width: 10px !important;
+  height: 15px !important;
+  object-fit: contain !important;
+  transition: 0.2s;
+}

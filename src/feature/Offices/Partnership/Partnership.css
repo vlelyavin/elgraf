@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-.partnership__subtitle {
+.partnership__quote {
   text-transform: uppercase;
   font-size: 1.1rem;
   width: 100%;
@@ -35,16 +35,6 @@
   gap: 20px;
 }
 
-.partnership__input {
-  border: none;
-  width: 100%;
-  background: #f7f7f7;
-  border-radius: 72px;
-  font-weight: 600;
-  padding: 20px 30px;
-  font-size: 1rem;
-}
-
 .partnership__input:focus {
   outline: none;
 }
@@ -58,4 +48,29 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 1050px) {
+  .partnership {
+    padding: 25px 20px;
+  }
+  .partnership__title {
+    font-size: 1.8rem;
+  }
+  .partnership__quote {
+    font-size: 1rem;
+  }
+  .partnership__quote {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .partnership__inputs {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .partnership__button__container {
+    justify-content: center;
+  }
 }

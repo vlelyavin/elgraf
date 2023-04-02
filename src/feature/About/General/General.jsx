@@ -1,9 +1,23 @@
 import { Container } from "../../../components/Container";
 import elgrafImage from "../../../assets/images/about/elgraf.png";
 import productionImage from "../../../assets/images/about/production.png";
+import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 import "./General.css";
 
 export const General = () => {
+  const locale = useSelector((state) => state.locale);
+  const [companyName, setCompanyName] = useState("ТОВ «Ельґраф»");
+  useEffect(() => {
+    if (locale === "us") {
+      setCompanyName("«Elgraf» LLC");
+    } else if (locale === "ru") {
+      setCompanyName("ООО «Ельграф»");
+    } else {
+      setCompanyName("ТОВ «Ельґраф»");
+    }
+  }, [locale]);
   return (
     <Container>
       <section className="general">
@@ -11,12 +25,20 @@ export const General = () => {
           <div className="general__column">
             <h2 className="general__column__title">Elgraf</h2>
             <p className="general__column__text">
-              <span className="semibold">ТОВ «Ельґраф»</span>
+              <FormattedMessage
+                id="about.general.firstRow.text"
+                values={{
+                  br: <br />,
+                  companyName: <strong>{companyName}</strong>,
+                }}
+                dangerouslySetInnerHTML
+              />
+              {/* <span className="semibold">ТОВ «Ельґраф»</span>
               <br /> Засноване в 1992 році.
               <br /> Спеціалізація - виготовлення повноколірного паковання з картону, гофрокартону та
               мікрогофрокартону. 
               <br /> Використання технологій препрінту та каширування.  За допомогою офсетного та флексографічного друку
-              Elgraf створює унікальне паковання для продукції найрізноманітніших галузей промисловості.
+              Elgraf створює унікальне паковання для продукції найрізноманітніших галузей промисловості. */}
             </p>
           </div>
           <div className="general__column__image__container">
@@ -24,14 +46,18 @@ export const General = () => {
           </div>
         </div>
 
-        <div className="general__row">
+        <div className="general__row second">
           <div className="general__column__image__container">
             <img src={productionImage} alt="productionImage" className="general__column__image" />
           </div>
           <div className="general__column">
-            <h2 className="general__column__title">Виробництво</h2>
+            <h2 className="general__column__title">
+              <FormattedMessage id="about.general.secondRow.title" />
+              {/* Виробництво */}
+            </h2>
             <p className="general__column__text">
-              Сьогодні «Ельґраф» є одним із найбільших на Заході України виробників повноколірного паковання з картону
+              <FormattedMessage id="about.general.secondRow.text" values={{ br: <br /> }} />
+              {/* Сьогодні «Ельґраф» є одним із найбільших на Заході України виробників повноколірного паковання з картону
               та гофрокартону.
               <br />
               <br />
@@ -44,7 +70,7 @@ export const General = () => {
               <br />
               Основною перевагою нашої фірми є великоформатний флексографічний друк (до 8-ми кольорів), який дозволяє у
               стислі терміни друкувати великі тиражі з високою якістю, а також подальше виготовлення гофроматеріалів із
-              попередньо задрукованих шарів матеріалу.
+              попередньо задрукованих шарів матеріалу. */}
             </p>
           </div>
         </div>

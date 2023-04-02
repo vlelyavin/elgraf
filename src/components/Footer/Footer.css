@@ -47,9 +47,7 @@
 }
 
 .footer__link {
-  font-weight: 600;
-  max-width: 200px;
-  width: 100%;
+  font-weight: 700;
   font-size: 1.1rem;
 }
 
@@ -66,7 +64,7 @@
 }
 
 .footer__contacts__title {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .footer__contacts__line {
@@ -76,4 +74,25 @@
 
 .footer__contacts__icon {
   align-self: flex-start;
+}
+
+.footer__button__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+  .footer__column {
+    width: 100%;
+  }
+  .footer__link {
+    width: 100%;
+    text-align: center;
+  }
 }
