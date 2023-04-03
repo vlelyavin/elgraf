@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.b46f40ad.css",
+    "main.css": "/elgraf/static/css/main.14df7169.css",
     "main.js": "/elgraf/static/js/main.d8ea5156.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
@@ -78,11 +78,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.b46f40ad.css.map": "/elgraf/static/css/main.b46f40ad.css.map",
+    "main.14df7169.css.map": "/elgraf/static/css/main.14df7169.css.map",
     "main.d8ea5156.js.map": "/elgraf/static/js/main.d8ea5156.js.map"
   },
   "entrypoints": [
-    "static/css/main.b46f40ad.css",
+    "static/css/main.14df7169.css",
     "static/js/main.d8ea5156.js"
   ]
 }
