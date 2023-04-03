@@ -1,4 +1,11 @@
 .order__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   backdrop-filter: blur(11px);
@@ -7,20 +14,59 @@
   align-items: center;
   justify-content: center;
   color: var(--black);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  padding: 20px;
 }
 
 .order {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 70px 180px;
+  padding: 40px 70px;
   background: white;
-  max-width: 1200px;
+  max-width: 900px;
   width: 100%;
+  height: 500px;
   height: auto;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.order__close__button {
+  position: absolute;
+  top: 54px;
+  right: 84px;
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+}
+.order__button__container {
+  width: 250px;
+}
+
+.order__close__button__line {
+  position: relative;
+  width: 28px;
+  height: 4px;
+  background: var(--black);
+  border-radius: 5px;
+}
+
+.left {
+  top: 10px;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.right {
+  top: 6px;
+  right: 0;
+  transform: rotate(-45deg);
 }
 
 .order__title {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .order__inputs {
@@ -28,14 +74,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .order__textarea {
-  height: 400px;
+  height: 200px;
   width: 100%;
   padding: 20px 30px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   background: #f7f7f7;
   border-radius: 20px;
   font-weight: 600;
@@ -70,15 +116,13 @@
   top: -2px;
   width: 18px;
   height: 20px;
-  background: url(../../../assets/images/icons/lock.svg) no-repeat center center / contain;
+  background: url(../../assets/images/icons/lock.svg) no-repeat center center / contain;
 }
 
 @media screen and (max-width: 1050px) {
-  .order {
-    padding: 50px 120px;
-  }
   .order__title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    padding: 0 50px 0 0;
   }
   .order__inputs {
     margin: 30px 0 25px;
@@ -86,14 +130,18 @@
 }
 
 @media screen and (max-width: 800px) {
-  .order {
-    padding: 20px;
-  }
-}
-
-@media screen and (max-width: 800px) {
   .order__buttons {
     flex-direction: column;
     gap: 10px;
+  }
+  .order__button__container {
+    width: 100%;
+  }
+  .order {
+    padding: 20px 20px;
+  }
+  .order__close__button {
+    top: 25px;
+    right: 25px;
   }
 }

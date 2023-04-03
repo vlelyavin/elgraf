@@ -5,4 +5,11 @@
   color: var(--primary);
   font-weight: 700;
   border-radius: 63px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  border-radius: 5px;
+  transition: 0.3s;
+  border: 2px solid transparent;
 }

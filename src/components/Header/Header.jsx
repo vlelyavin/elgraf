@@ -4,7 +4,6 @@ import { ROUTES } from "../../constants/routes";
 import { Button } from "../Button";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { SET_LOCALE } from "../../constants/actionTypes";
 import { FormattedMessage } from "react-intl";
 import { Menu } from "../../feature/Header/Menu";
 import emailIcon from "../../assets/images/header/emailIcon.svg";
@@ -17,8 +16,9 @@ import logo from "../../assets/images/icons/logo.svg";
 import classNames from "classnames";
 
 import "./Header.css";
+import { setLocale, toggleOrderFormVisibility } from "../../constants/actions";
 
-export const Header = ({ background, buttonBackground, buttonColor }) => {
+export const Header = () => {
   const firstLine = useRef();
   const secondLine = useRef();
   const thirdLine = useRef();
@@ -46,7 +46,7 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
   }, [isMenuVisible]);
 
   const handleValueChange = (event) => {
-    dispatch({ type: SET_LOCALE, payload: event.target.value });
+    dispatch(setLocale(event.target.value));
   };
 
   useEffect(() => {
@@ -76,7 +76,7 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
   return (
     <>
       <Container>
-        <div className="header__info" style={{ background: background }}>
+        <div className="header__info">
           <div className="header__info__item emails">
             <div className="header__info__item__line">
               <div className="header__info__item__line__icon__container">
@@ -161,13 +161,11 @@ export const Header = ({ background, buttonBackground, buttonColor }) => {
                   US
                 </option>
               </select>
-              <Link to={ROUTES.order}>
-                <Button
-                  title={<FormattedMessage id="button.order" />}
-                  background={buttonBackground}
-                  color={buttonColor}
-                />
-              </Link>
+
+              <Button
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                title={<FormattedMessage id="button.order" />}
+              />
             </div>
           </div>
         </Container>

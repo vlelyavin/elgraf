@@ -3,8 +3,9 @@ import certificateISOImage from "../../../assets/images/about/certificateISO.png
 import certificateImage from "../../../assets/images/about/certificate.png";
 import "./Certificates.css";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
+import classNames from "classnames";
 
 export const Certificates = () => {
   const locale = useSelector((state) => state.locale);
@@ -18,6 +19,31 @@ export const Certificates = () => {
       setCompanyName("ТОВ «Ельґраф»");
     }
   }, [locale]);
+
+  const [isVisible, setIsVisible] = useState({});
+  const sectionRefs = [useRef(null)];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          setIsVisible((prevState) => ({
+            ...prevState,
+            [id]: entry.isIntersecting,
+          }));
+        });
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0,
+      }
+    );
+
+    sectionRefs.forEach((sectionRef) => {
+      observer.observe(sectionRef.current);
+    });
+  }, []);
   return (
     <Container>
       <div className="certificates__wrapper">
@@ -28,8 +54,8 @@ export const Certificates = () => {
           репутації на ринку поліграфії. Отримані сертифікати- це якнайкраще підтвердження високоякісного виконання
           наших послуг. */}
           </p>
-          <div className="certificates__row">
-            <div className="certificates__column">
+          <div className="certificates__row" ref={sectionRefs[0]} id="firstItem">
+            <div className={classNames("certificates__column", { "left-to-right": isVisible["firstItem"] })}>
               <div className="certificates__image__container">
                 <img src={certificateISOImage} alt="certificateISOImage" className="certificates__image" />
               </div>
@@ -42,7 +68,7 @@ export const Certificates = () => {
                 {/* Сертифікація системи управління менеджменту якості */}
               </p>
             </div>
-            <div className="certificates__column">
+            <div className={classNames("certificates__column", { "right-to-left": isVisible["firstItem"] })}>
               <div className="certificates__image__container">
                 <img src={certificateImage} alt="certificateImage" className="certificates__image" />
               </div>

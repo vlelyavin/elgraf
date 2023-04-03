@@ -6,7 +6,6 @@ import shoesImage from "../../../assets/images/products/shoes.png";
 import leftArrow from "../../../assets/images/icons/arrowLeft.svg";
 import rightArrow from "../../../assets/images/icons/arrowRight.svg";
 import { Button } from "../../../components/Button";
-import { ROUTES } from "../../../constants/routes";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -86,7 +85,8 @@ import showBoxImage16 from "../../../assets/images/products/showBox/16.png";
 import showBoxImage17 from "../../../assets/images/products/showBox/17.png";
 import showBoxImage18 from "../../../assets/images/products/showBox/18.png";
 import { FormattedMessage } from "react-intl";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggleOrderFormVisibility } from "../../../constants/actions";
 
 function CustomPrevArrow(props) {
   const { className, onClick } = props;
@@ -99,6 +99,7 @@ function CustomNextArrow(props) {
 }
 
 export const ProductList = () => {
+  const dispatch = useDispatch();
   const settings = {
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
@@ -184,6 +185,7 @@ export const ProductList = () => {
   ];
 
   const childrenGoodsImages = [childrenGoodsImage1, childrenGoodsImage2, childrenGoodsImage3];
+
   return (
     <section className="product__list">
       <Container>
@@ -201,18 +203,24 @@ export const ProductList = () => {
               <FormattedMessage id="packaging.industrialGoods" />
               {/* Промислових виробів */}
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
 
           <div className="product__list__column">
             <Slider {...settings} className="product__list__column__image__container">
@@ -228,18 +236,24 @@ export const ProductList = () => {
               <FormattedMessage id="packaging.alcoholGoods" />
               {/* Алкогольних напоїв */}
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
 
           <div className="product__list__column">
             <Slider {...settings} className="product__list__column__image__container">
@@ -253,18 +267,24 @@ export const ProductList = () => {
             <h2 className="product__list__column__title">
               <FormattedMessage id="packaging.transport&trays" />
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
         </div>
 
         <div className="product__list__row">
@@ -281,18 +301,24 @@ export const ProductList = () => {
               <FormattedMessage id="packaging.childrenGoods" />
               {/* Дитячих товарів */}
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
 
           <div className="product__list__column">
             <div className="product__list__column__image__container">
@@ -305,42 +331,54 @@ export const ProductList = () => {
               <FormattedMessage id="packaging.shoes" />
               {/* Взуття */}
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
 
           <div className="product__list__column">
             <div className="product__list__column__image__container">
               <img src={differentNeedsImage} alt="differentNeedsImage" className="product__list__column__image" />
             </div>
             <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
+              <FormattedMessage id="packing" />
             </p>
-            <h2 className="product__list__column__title smaller">
+            <h2 className="product__list__column__title">
               <FormattedMessage id="packaging.differentNeeds" />
               {/* Товарів для найрізноманітніших потреб */}
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
         </div>
 
         <div className="product__list__row">
@@ -357,18 +395,24 @@ export const ProductList = () => {
               <FormattedMessage id="packaging.foodProducts" />
               {/* Харчових продуктів */}
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
 
           <div className="product__list__column">
             <Slider {...settings} className="product__list__column__image__container">
@@ -378,24 +422,30 @@ export const ProductList = () => {
             </Slider>
 
             <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
+              <FormattedMessage id="packing" />
             </p>
             <h2 className="product__list__column__title">
               <FormattedMessage id="packaging.exhibition&displays" />
               {/* Виставкова (дисплеї), ShowBox */}
             </h2>
-            <Link to={ROUTES.order} className="product__list__column__button__container">
+            <div
+              onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              className="product__list__column__button__container"
+            >
               <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
-            </Link>
+            </div>
           </div>
-          <Link to={ROUTES.order} className="product__list__column__button__container__mobile">
+          <div
+            onClick={() => dispatch(toggleOrderFormVisibility(true))}
+            className="product__list__column__button__container__mobile"
+          >
             <Button
               title={<FormattedMessage id="button.order" />}
               background="var(--black)"
               color="var(--primary)"
               width="100%"
             />
-          </Link>
+          </div>
         </div>
       </Container>
     </section>

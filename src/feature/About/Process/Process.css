@@ -16,6 +16,7 @@
 .process__row {
   display: flex;
   gap: 30px;
+  opacity: 0;
 }
 
 .process__column {

@@ -1,12 +1,12 @@
 import { Container } from "../../../components/Container";
-import tray from "../../../assets/images/packaging/tray.png";
-import childrengoods from "../../../assets/images/packaging/childrengoods.png";
-import industrialgoods from "../../../assets/images/packaging/industrialgoods.png";
-import shoes from "../../../assets/images/packaging/shoes.png";
-import alcoholgoods from "../../../assets/images/packaging/alcoholgoods.png";
-import transporting from "../../../assets/images/packaging/transporting.png";
-import exhibition from "../../../assets/images/packaging/exhibition.png";
-import showboxes from "../../../assets/images/packaging/showboxes.png";
+import tray from "../../../assets/images/packaging/tray.svg";
+import childrengoods from "../../../assets/images/packaging/childrengoods.svg";
+import industrialgoods from "../../../assets/images/packaging/industrialgoods.svg";
+import shoes from "../../../assets/images/packaging/shoes.svg";
+import alcoholgoods from "../../../assets/images/packaging/alcoholgoods.svg";
+import transporting from "../../../assets/images/packaging/transporting.svg";
+import exhibition from "../../../assets/images/packaging/exhibition.svg";
+import other from "../../../assets/images/packaging/other.svg";
 import "./Packaging.css";
 import { FormattedMessage } from "react-intl";
 import { ROUTES } from "../../../constants/routes";
@@ -20,12 +20,12 @@ export const Packaging = () => {
     { title: <FormattedMessage id="packaging.shoes" />, src: shoes, background: "#366BD0" },
     { title: <FormattedMessage id="packaging.alcoholGoods" />, src: alcoholgoods, background: "#366BD0" },
     {
-      title: <FormattedMessage id="packaging.transport" />,
-      src: transporting,
+      title: <FormattedMessage id="packaging.other" />,
+      src: other,
       background: "#6E9913",
     },
-    { title: <FormattedMessage id="packaging.exhibition" />, src: exhibition, background: "#FFB919" },
-    { title: <FormattedMessage id="packaging.displays" />, src: showboxes, background: "#B1D036" },
+    { title: <FormattedMessage id="packaging.transport" />, src: transporting, background: "#FFB919" },
+    { title: <FormattedMessage id="packaging.displays" />, src: exhibition, background: "#B1D036" },
   ];
   return (
     <Container>

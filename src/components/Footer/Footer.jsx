@@ -9,39 +9,45 @@ import { Button } from "../Button";
 import { Container } from "../Container";
 import { FormattedMessage } from "react-intl";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleOrderFormVisibility } from "../../constants/actions";
 
 export const Footer = () => {
+  const dispatch = useDispatch();
   const locale = useSelector((state) => state.locale);
+  const [title, setTitle] = useState("«Ельґраф»");
   const [address, setAddress] = useState("с. Сокільники, вул. Львівська Бічна, 15");
   useEffect(() => {
     if (locale === "us") {
       setAddress("c. Sokolnyky, str. Lvivska Bichna, 15");
+      setTitle("«Elgraf»");
     } else if (locale === "ru") {
       setAddress("с. Сокольники, ул. Львовская Боковая, 15");
+      setTitle("«Ельграф»");
     } else {
       setAddress("с. Сокільники, вул. Львівська Бічна, 15");
+      setTitle("«Ельґраф»");
     }
   }, [locale]);
   return (
     <Container>
       <footer className="footer">
-        <div className="footer__column">
+        <div className="footer__column firstColumn">
           <div className="footer__logo__container">
             <img src={largeLogo} alt="largeLogo" className="footer__logo" />
           </div>
           <p className="footer__logo__description">
-            <FormattedMessage id="footer.license" />
+            <FormattedMessage id="footer.license" values={{ br: <br /> }} />
           </p>
           <div className="footer__description">
             {/* Компанія «Ельґраф» - це яскраве та якісне паковання, що відповідає всім світовим стандартам. Солідна
             репутація на ринку поліграфічних послуг і цілковита довіра. */}
-            <FormattedMessage id="footer.description" />
+            <FormattedMessage id="footer.description" values={{ br: <br />, title: <strong>{title}</strong> }} />
           </div>
           <div className="footer__column__location">
             <img src={locationIcon} alt="locationIcon" className="footer__column__location__icon" />
             <p className="footer__column__location__text">
-              <FormattedMessage id="location" values={{ address: <strong>{address}</strong> }} />
+              <FormattedMessage id="location" values={{ br: <br />, address: <strong>{address}</strong> }} />
               {/* Україна, 81130, Львівська обл., Пустомитівський район,
               <span className="bold"> с. Сокільники, вул. Львівська Бічна, 15</span> */}
             </p>
@@ -65,9 +71,9 @@ export const Footer = () => {
         </div>
         <div className="footer__column">
           <div className="footer__contacts">
-            <Link to={ROUTES.order} className="footer__button__container">
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" />
-            </Link>
+            <div className="footer__button__container" onClick={() => dispatch(toggleOrderFormVisibility(true))}>
+              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+            </div>
             <div className="footer__contacts__block">
               <p className="footer__contacts__title">
                 <FormattedMessage id="reception" />

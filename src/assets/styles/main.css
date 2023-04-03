@@ -55,3 +55,48 @@ body {
   font-weight: 600;
   padding: 0 0 0 20px;
 }
+
+.left-to-right {
+  animation: left-to-right 0.5s forwards;
+}
+
+.right-to-left {
+  animation: right-to-left 0.5s forwards;
+}
+
+.bottom-to-top {
+  animation: bottom-to-top 0.5s forwards;
+}
+
+@keyframes right-to-left {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bottom-to-top {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

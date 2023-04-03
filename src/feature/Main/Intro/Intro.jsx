@@ -9,11 +9,16 @@ import colorfill from "../../../assets/images/main/colorfill.svg";
 import design from "../../../assets/images/main/design.svg";
 import "./Intro.css";
 import classNames from "classnames";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleOrderFormVisibility } from "../../../constants/actions";
 
 export const Intro = () => {
+  const titleRef = useRef();
+  const descriptionRef = useRef();
+  const buttonRef = useRef();
+  const dispatch = useDispatch();
   const interval = 2000;
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = useMemo(() => [{ src: slider__first }, { src: slider__second }, { src: slider__third }], []);
@@ -34,24 +39,42 @@ export const Intro = () => {
       setTitle("ПАКУВАННЯ");
     }
   }, [locale]);
+
+  useEffect(() => {
+    const title = titleRef.current;
+    const description = descriptionRef.current;
+    const button = buttonRef.current;
+
+    title.classList.add("left-to-right");
+    setTimeout(() => {
+      description.classList.add("left-to-right");
+    }, 300);
+    setTimeout(() => {
+      button.classList.add("left-to-right");
+    }, 600);
+  }, []);
   return (
     <>
       <section className="intro">
         <Container>
           <div className="intro__inner">
             <div className="intro__info">
-              <p className="intro__info__title">
+              <p className="intro__info__title" ref={titleRef}>
                 <FormattedMessage
                   id="main.intro.title"
                   values={{ title: <span style={{ color: "#FFB800" }}>{title}</span> }}
                   dangerouslySetInnerHTML
                 />
               </p>
-              <p className="intro__info__description">
+              <p className="intro__info__description" ref={descriptionRef}>
                 <FormattedMessage id="main.intro.text" />
                 {/* Поєднайте свої продукти з інноваційними рішеннями паковання. */}
               </p>
-              <div className="intro__info__button__container">
+              <div
+                className="intro__info__button__container"
+                ref={buttonRef}
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+              >
                 <Button
                   title={<FormattedMessage id="button.order" />}
                   fontSize="1.1rem"

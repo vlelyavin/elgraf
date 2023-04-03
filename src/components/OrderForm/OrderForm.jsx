@@ -1,12 +1,15 @@
 import { FormattedMessage } from "react-intl";
-import { Button } from "../../../components/Button";
-import { Input } from "../../../components/Input";
+import { Button } from "../Button";
+import { Input } from "../Input";
 import "./OrderForm.css";
 import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
+import { toggleOrderFormVisibility } from "../../constants/actions";
 
 export const OrderForm = () => {
+  const isOrderFormVisible = useSelector((state) => state.isOrderFormVisible);
+  const dispatch = useDispatch();
   const fileInputRef = useRef();
   const [placeholders, setPlaceholders] = useState({
     fullName: "ПІБ",
@@ -113,10 +116,15 @@ export const OrderForm = () => {
     const file = event.target.files[0];
     console.log(file);
   };
+  if (!isOrderFormVisible) return null;
   return (
     <>
       <div className="order__container">
         <form className="order" ref={form} onSubmit={sendEmail}>
+          <div className="order__close__button" onClick={() => dispatch(toggleOrderFormVisibility(false))}>
+            <div className="order__close__button__line left"></div>
+            <div className="order__close__button__line right"></div>
+          </div>
           <h1 className="order__title">
             <FormattedMessage id="orderForm.title" />
             {/* Оформити замовлення */}
@@ -128,7 +136,7 @@ export const OrderForm = () => {
                 name="name"
                 value={values.name}
                 onChange={handleInputChange}
-                style={{ border: errors.name ? "2px solid red" : "" }}
+                style={{ border: errors.name ? "2px solid red" : "", fontSize: "0.9rem", padding: "10px 15px" }}
               />
               {errors.name && <p className="error">{errors.name}</p>}
             </div>
@@ -137,12 +145,14 @@ export const OrderForm = () => {
               name="company"
               value={values.company}
               onChange={handleInputChange}
+              style={{ fontSize: "0.9rem", padding: "10px 15px" }}
             />
             <Input
               placeholder={placeholders.phoneNumber}
               name="phoneNumber"
               value={values.phoneNumber}
               onChange={handleInputChange}
+              style={{ fontSize: "0.9rem", padding: "10px 15px" }}
             />
             <div className="input__container">
               <Input
@@ -150,7 +160,7 @@ export const OrderForm = () => {
                 name="email"
                 value={values.email}
                 onChange={handleInputChange}
-                style={{ border: errors.email ? "2px solid red" : "" }}
+                style={{ border: errors.email ? "2px solid red" : "", fontSize: "0.9rem", padding: "10px 15px" }}
               />
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
@@ -160,7 +170,7 @@ export const OrderForm = () => {
                 name="message"
                 placeholder={placeholders.textarea}
                 onChange={handleInputChange}
-                style={{ border: errors.message ? "2px solid red" : "" }}
+                style={{ border: errors.message ? "2px solid red" : "", fontSize: "0.9rem", padding: "10px 15px" }}
               />
               {errors.message && <p className="error">{errors.message}</p>}
             </div>
@@ -170,7 +180,7 @@ export const OrderForm = () => {
             <FormattedMessage id="orderForm.text" />
           </p>
           <div className="order__buttons">
-            <div className="order__input__container">
+            <div className="order__button__container">
               <Button
                 type="file"
                 name="file"
@@ -178,18 +188,19 @@ export const OrderForm = () => {
                 background="var(--primary)"
                 border="2px solid var(--secondary)"
                 color="var(--secondary)"
-                width="250px"
+                width="100%"
                 onClick={handleFileButtonClick}
               />
               <input type="file" onChange={handleFileInputChange} ref={fileInputRef} style={{ display: "none" }} />
             </div>
-
-            <Button
-              title={<FormattedMessage id="form.button.send" />}
-              background="#B1D036"
-              color="var(--primary)"
-              width="250px"
-            />
+            <div className="order__button__container">
+              <Button
+                title={<FormattedMessage id="form.button.send" />}
+                background="#B1D036"
+                color="var(--primary)"
+                width="100%"
+              />
+            </div>
           </div>
           <div className="order__security">
             <p className="order__security__title bold">

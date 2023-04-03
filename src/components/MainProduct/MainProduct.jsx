@@ -6,15 +6,45 @@ import congrevImage from "../../assets/images/product/congrev.png";
 import productBackground from "../../assets/images/product/productBackground.png";
 import "./MainProduct.css";
 import { FormattedMessage } from "react-intl";
+import { useEffect, useRef, useState } from "react";
+import classNames from "classnames";
 
 export const MainProduct = () => {
+  const [isVisible, setIsVisible] = useState({});
+  const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          setIsVisible((prevState) => ({
+            ...prevState,
+            [id]: entry.isIntersecting,
+          }));
+        });
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0, // 50% of the section must be visible
+      }
+    );
+
+    sectionRefs.forEach((sectionRef) => {
+      observer.observe(sectionRef.current);
+    });
+  }, []);
   return (
     <section className="product">
       <Container>
         <div className="product__main">
           <div className="product__main__image__container">
             <img src={product} alt="product" className="product__main__image" />
-            <div className="product__details lefttop">
+            <div
+              className={classNames("product__details lefttop", { "bottom-to-top": isVisible["firstItem"] })}
+              id="firstItem"
+              ref={sectionRefs[0]}
+            >
               <div className="product__details__info">
                 <p className="product__details__info__title">
                   <FormattedMessage id="mainProduct.varnishing.title" />
@@ -36,7 +66,11 @@ export const MainProduct = () => {
               </div>
             </div>
 
-            <div className="product__details leftbottom">
+            <div
+              className={classNames("product__details leftbottom", { "bottom-to-top": isVisible["secondItem"] })}
+              id="secondItem"
+              ref={sectionRefs[1]}
+            >
               <div className="product__details__info">
                 <p className="product__details__info__title">
                   <FormattedMessage id="mainProduct.lamination.title" />
@@ -62,7 +96,11 @@ export const MainProduct = () => {
               </div>
             </div>
 
-            <div className="product__details righttop">
+            <div
+              className={classNames("product__details righttop", { "bottom-to-top": isVisible["thirdItem"] })}
+              id="thirdItem"
+              ref={sectionRefs[2]}
+            >
               <div className="product__details__info">
                 <p className="product__details__info__title">
                   <FormattedMessage id="mainProduct.embossing.title" />
@@ -79,7 +117,11 @@ export const MainProduct = () => {
               </div>
             </div>
 
-            <div className="product__details rightbottom">
+            <div
+              className={classNames("product__details rightbottom", { "bottom-to-top": isVisible["fourthItem"] })}
+              id="fourthItem"
+              ref={sectionRefs[3]}
+            >
               <div className="product__details__info">
                 <p className="product__details__info__title">
                   <FormattedMessage id="mainProduct.foilStamping.title" />

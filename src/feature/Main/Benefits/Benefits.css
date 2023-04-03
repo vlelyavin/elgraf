@@ -21,10 +21,8 @@
 }
 
 .benefits__column__image__container {
-  padding: 40px;
   width: 40%;
   height: 100%;
-  background: var(--secondary);
   flex-shrink: 0;
   border-radius: 20px;
 }

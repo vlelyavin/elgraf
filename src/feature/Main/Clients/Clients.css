@@ -5,14 +5,29 @@
 }
 
 .clients__banner__container {
-  width: 100%;
-  height: 500px;
+  width: 120%;
+  height: 550px;
 }
 
 .clients__banner {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.clients-animation {
+  animation: flow 15s linear infinite;
+}
+
+@keyframes flow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media screen and (max-width: 1050px) {

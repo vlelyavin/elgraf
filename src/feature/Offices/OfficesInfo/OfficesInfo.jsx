@@ -2,21 +2,8 @@ import { FormattedMessage } from "react-intl";
 import locationIcon from "../../../assets/images/icons/locationIcon.svg";
 import { Container } from "../../../components/Container";
 import "./OfficesInfo.css";
-import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 
 export const OfficesInfo = () => {
-  const locale = useSelector((state) => state.locale);
-  const [address, setAddress] = useState("с. Сокільники, вул. Львівська Бічна, 15");
-  useEffect(() => {
-    if (locale === "us") {
-      setAddress("c. Sokolnyky, str. Lvivska Bichna, 15");
-    } else if (locale === "ru") {
-      setAddress("с. Сокольники, ул. Львовская Боковая, 15");
-    } else {
-      setAddress("с. Сокільники, вул. Львівська Бічна, 15");
-    }
-  }, [locale]);
   return (
     <Container>
       <section className="offices">
@@ -26,13 +13,14 @@ export const OfficesInfo = () => {
         <div className="offices__info">
           <div className="offices__location">
             <p className="offices__description">
-              <FormattedMessage id="offices.limited" />
+              <FormattedMessage id="offices.limited" values={{ letter: "\u0490" }} />
               {/* Товариство з обмеженою відповідальністю «ЕЛЬґРАФ» */}
             </p>
             <div className="offices__location__line">
               <img src={locationIcon} alt="locationIcon" className="offices__location__line__image" />
               <p className="offices__location__text">
-                <FormattedMessage id="location" values={{ address: <strong>{address}</strong> }} />
+                <FormattedMessage id="offices.location" values={{ br: <br /> }} />
+                {/* <FormattedMessage id="location" values={{ br: <br />, address: <strong>{address}</strong> }} /> */}
                 {/* вул. Львівська Бічна, 15, 81130, Львівська обл., Пустомитівський р-н, с. Сокільники, Україна. */}
               </p>
             </div>

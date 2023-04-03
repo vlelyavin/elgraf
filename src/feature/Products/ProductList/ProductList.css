@@ -76,10 +76,6 @@
   transition: height 0.3s;
 }
 
-.smaller {
-  font-size: 1.1rem;
-}
-
 .product__list__column__button__container__mobile {
   display: none;
   width: 100%;

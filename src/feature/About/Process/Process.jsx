@@ -7,8 +7,34 @@ import stampingFormsMobileImage from "../../../assets/images/about/stampingForms
 import paintLabMobileImage from "../../../assets/images/about/paintLabMobile.png";
 import "./Process.css";
 import { FormattedMessage } from "react-intl";
+import { useEffect, useRef, useState } from "react";
+import classNames from "classnames";
 
 export const Process = () => {
+  const [isVisible, setIsVisible] = useState({});
+  const sectionRefs = [useRef(null)];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          setIsVisible((prevState) => ({
+            ...prevState,
+            [id]: entry.isIntersecting,
+          }));
+        });
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0,
+      }
+    );
+
+    sectionRefs.forEach((sectionRef) => {
+      observer.observe(sectionRef.current);
+    });
+  }, []);
   return (
     <Container>
       <section className="process">
@@ -16,7 +42,11 @@ export const Process = () => {
           <FormattedMessage id="about.process.title" />
           {/* Короткі відомості про процеси */}
         </h2>
-        <div className="process__row">
+        <div
+          className={classNames("process__row", { "bottom-to-top": isVisible["firstItem"] })}
+          id="firstItem"
+          ref={sectionRefs[0]}
+        >
           <div className="process__column">
             <div className="process__column__image__container">
               <img src={rawImage} alt="rawImage" className="process__column__image" />
