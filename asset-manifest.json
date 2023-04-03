@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.38b5a69a.css",
-    "main.js": "/elgraf/static/js/main.859d17e5.js",
+    "main.css": "/elgraf/static/css/main.0e843455.css",
+    "main.js": "/elgraf/static/js/main.c3c32b7e.js",
     "static/media/tray.svg": "/elgraf/static/media/tray.6d0c021f92047745aefad4b08706a6f6.svg",
     "static/media/industrialgoods.svg": "/elgraf/static/media/industrialgoods.6dca42c60510fffdcf0b47a848297656.svg",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
@@ -79,11 +79,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.38b5a69a.css.map": "/elgraf/static/css/main.38b5a69a.css.map",
-    "main.859d17e5.js.map": "/elgraf/static/js/main.859d17e5.js.map"
+    "main.0e843455.css.map": "/elgraf/static/css/main.0e843455.css.map",
+    "main.c3c32b7e.js.map": "/elgraf/static/js/main.c3c32b7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.38b5a69a.css",
-    "static/js/main.859d17e5.js"
+    "static/css/main.0e843455.css",
+    "static/js/main.c3c32b7e.js"
   ]
 }
