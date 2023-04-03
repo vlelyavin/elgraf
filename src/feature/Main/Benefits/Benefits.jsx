@@ -1,6 +1,6 @@
 import { FormattedMessage } from "react-intl";
-import benefitsImageFirst from "../../../assets/images/benefits/benefitsFirst.svg";
-import benefitsImageSecond from "../../../assets/images/benefits/benefitsSecond.svg";
+import benefitsImageFirst from "../../../assets/images/benefits/benefitsFirst.png";
+import benefitsImageSecond from "../../../assets/images/benefits/benefitsSecond.png";
 import { Button } from "../../../components/Button";
 import { Container } from "../../../components/Container";
 import "./Benefits.css";
