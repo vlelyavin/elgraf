@@ -5,12 +5,12 @@ import paintLabImage from "../../../assets/images/about/paintLab.png";
 import rawMobileImage from "../../../assets/images/about/rawMobile.png";
 import stampingFormsMobileImage from "../../../assets/images/about/stampingFormsMobile.png";
 import paintLabMobileImage from "../../../assets/images/about/paintLabMobile.png";
-import "./Process.css";
 import { FormattedMessage } from "react-intl";
 import { useEffect, useRef, useState } from "react";
-import classNames from "classnames";
+import "./Process.css";
 
 export const Process = () => {
+  const rowRef = useRef();
   const [isVisible, setIsVisible] = useState({});
   const sectionRefs = [useRef(null)];
 
@@ -35,18 +35,20 @@ export const Process = () => {
       observer.observe(sectionRef.current);
     });
   }, []);
+
+  useEffect(() => {
+    if (isVisible["firstItem"]) {
+      rowRef.current.classList.add("bottom-to-top");
+    }
+  }, [isVisible]);
   return (
     <Container>
       <section className="process">
-        <h2 className="process__title">
+        <h2 className="process__title" id="firstItem" ref={sectionRefs[0]}>
           <FormattedMessage id="about.process.title" />
           {/* Короткі відомості про процеси */}
         </h2>
-        <div
-          className={classNames("process__row", { "bottom-to-top": isVisible["firstItem"] })}
-          id="firstItem"
-          ref={sectionRefs[0]}
-        >
+        <div className="process__row" ref={rowRef}>
           <div className="process__column">
             <div className="process__column__image__container">
               <img src={rawImage} alt="rawImage" className="process__column__image" />
