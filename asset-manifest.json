@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.228f7c2c.css",
-    "main.js": "/elgraf/static/js/main.235e56dd.js",
+    "main.css": "/elgraf/static/css/main.61c30a11.css",
+    "main.js": "/elgraf/static/js/main.2b65a233.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
     "static/media/2.png": "/elgraf/static/media/2.13c8f89afec5c355066f.png",
@@ -32,7 +32,6 @@
     "static/media/largeLogo.svg": "/elgraf/static/media/largeLogo.6f4450b73c8700f259ffa45dbe30bb75.svg",
     "static/media/15.png": "/elgraf/static/media/15.f4990f23d4baed6977b4.png",
     "static/media/logo.svg": "/elgraf/static/media/logo.2f965d7e17fc15fd9a913cfd768cae63.svg",
-    "static/media/smallLogo.svg": "/elgraf/static/media/smallLogo.a2bda09fce79014fecca9a27463c0bbc.svg",
     "static/media/11.png": "/elgraf/static/media/11.0bbc797beaf69ab62ae2.png",
     "static/media/16.png": "/elgraf/static/media/16.aae3e5637ca8d61e8146.png",
     "static/media/raw.png": "/elgraf/static/media/raw.fff1ac28d70122d2ac7d.png",
@@ -78,11 +77,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.228f7c2c.css.map": "/elgraf/static/css/main.228f7c2c.css.map",
-    "main.235e56dd.js.map": "/elgraf/static/js/main.235e56dd.js.map"
+    "main.61c30a11.css.map": "/elgraf/static/css/main.61c30a11.css.map",
+    "main.2b65a233.js.map": "/elgraf/static/js/main.2b65a233.js.map"
   },
   "entrypoints": [
-    "static/css/main.228f7c2c.css",
-    "static/js/main.235e56dd.js"
+    "static/css/main.61c30a11.css",
+    "static/js/main.2b65a233.js"
   ]
 }
