@@ -173,13 +173,13 @@
     transform: translateX(-15%);
   }
   .lefttop {
-    top: -18px;
-    left: 0;
+    top: 40px;
+    left: -40px;
     height: 120px;
   }
   .righttop {
-    top: 190px;
-    left: 0;
+    top: 200px;
+    left: -40px;
     height: 120px;
   }
   .righttop .product__details__info {
@@ -188,12 +188,15 @@
     gap: 8px;
   }
   .leftbottom {
-    bottom: 225px;
-    left: 0;
+    bottom: 245px;
+    left: -40px;
   }
   .rightbottom {
-    bottom: -55px;
-    left: 0;
+    bottom: 20px;
+    left: -40px;
+  }
+  .rightbottom .product__details__text {
+    margin: 20px 0 0 0;
   }
   .product__image__container {
     width: 100px;

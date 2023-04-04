@@ -11,7 +11,7 @@ import phoneIcon from "../../assets/images/header/phoneIcon.svg";
 import linkedinIcon from "../../assets/images/header/linkedinIcon.svg";
 import facebookIcon from "../../assets/images/header/facebookIcon.svg";
 import instagramIcon from "../../assets/images/header/instagramIcon.svg";
-import smallLogo from "../../assets/images/icons/smallLogo.svg";
+import largeLogo from "../../assets/images/icons/largeLogo.svg";
 import logo from "../../assets/images/icons/logo.svg";
 import classNames from "classnames";
 
@@ -145,7 +145,7 @@ export const Header = () => {
                 className="header__nav__link"
               >
                 <div className="header__logo__container">
-                  <img src={smallLogo} alt="smallLogo" className="header__logo" />
+                  <img src={largeLogo} alt="largeLogo" className="header__logo" />
                 </div>
               </Link>
             </nav>
@@ -174,20 +174,27 @@ export const Header = () => {
         <Link to={ROUTES.initial} className="header__mobile__logo__container" onClick={() => setActiveLink(4)}>
           <img src={logo} alt="logo" className="header__mobile__logo" />
         </Link>
-        <div className="header__mobile__menu__container" onClick={handleMenuClick}>
-          <div className="header__menu__line" ref={firstLine}></div>
-          <div className="header__menu__line" ref={secondLine}></div>
-          <div className="header__menu__line" ref={thirdLine}></div>
-          {/* <img src={menu} alt="menu" className="header__mobile__menu" /> */}
+        <div className="header__right">
+          <select className="header__locales menulocale" value={locale} onChange={handleValueChange}>
+            <option defaultValue className="header__locale__option" value="ua">
+              UA
+            </option>
+            <option defaultValue className="header__locale__option" value="ru">
+              RU
+            </option>
+            <option className="header__locale__option" value="us">
+              US
+            </option>
+          </select>
+          <div className="header__mobile__menu__container" onClick={handleMenuClick}>
+            <div className="header__menu__line" ref={firstLine}></div>
+            <div className="header__menu__line" ref={secondLine}></div>
+            <div className="header__menu__line" ref={thirdLine}></div>
+            {/* <img src={menu} alt="menu" className="header__mobile__menu" /> */}
+          </div>
         </div>
       </header>
-      <Menu
-        isMenuVisible={isMenuVisible}
-        activeLink={activeLink}
-        setActiveLink={setActiveLink}
-        locale={locale}
-        handleValueChange={handleValueChange}
-      />
+      <Menu isMenuVisible={isMenuVisible} activeLink={activeLink} setActiveLink={setActiveLink} />
     </>
   );
 };

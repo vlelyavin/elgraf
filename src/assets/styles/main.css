@@ -29,9 +29,6 @@ html {
   font-size: 15px;
   color: var(--primary);
   scroll-behavior: smooth;
-}
-
-body {
   overflow-x: hidden;
 }
 

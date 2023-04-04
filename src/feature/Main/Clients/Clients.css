@@ -5,18 +5,19 @@
 }
 
 .clients__banner__container {
-  width: 1950px;
-  height: 550px;
+  width: 100vw;
+  height: 500px;
+  overflow: hidden;
 }
 
 .clients__banner {
-  width: 100%;
+  width: 110%;
   height: 100%;
   object-fit: cover;
 }
 
 .clients-animation {
-  animation: flow 15s linear infinite;
+  animation: flow 7s linear infinite;
 }
 
 @keyframes flow {
@@ -24,7 +25,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-20%);
+    transform: translateX(-3%);
   }
   100% {
     transform: translateX(0);
@@ -35,5 +36,12 @@
   .clients__title {
     margin: 40px 0 20px;
     font-size: 1.8rem;
+  }
+  .clients__banner__container {
+    width: 100vw;
+    height: 300px;
+  }
+  .clients__banner {
+    width: 110%;
   }
 }

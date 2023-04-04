@@ -18,6 +18,9 @@ export const Intro = () => {
   const titleRef = useRef();
   const descriptionRef = useRef();
   const buttonRef = useRef();
+  const titleRefMobile = useRef();
+  const descriptionRefMobile = useRef();
+  const buttonRefMobile = useRef();
   const dispatch = useDispatch();
   const interval = 2000;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,7 +39,7 @@ export const Intro = () => {
     } else if (locale === "ru") {
       setTitle("УПАКОВКИ");
     } else if (locale === "ua") {
-      setTitle("ПАКУВАННЯ");
+      setTitle("ПАКОВАННЯ");
     }
   }, [locale]);
 
@@ -45,6 +48,10 @@ export const Intro = () => {
     const description = descriptionRef.current;
     const button = buttonRef.current;
 
+    const titleMobile = titleRefMobile.current;
+    const descriptionMobile = descriptionRefMobile.current;
+    const buttonMobile = buttonRefMobile.current;
+
     title.classList.add("left-to-right");
     setTimeout(() => {
       description.classList.add("left-to-right");
@@ -52,7 +59,16 @@ export const Intro = () => {
     setTimeout(() => {
       button.classList.add("left-to-right");
     }, 600);
+
+    titleMobile.classList.add("left-to-right");
+    setTimeout(() => {
+      descriptionMobile.classList.add("left-to-right");
+    }, 300);
+    setTimeout(() => {
+      buttonMobile.classList.add("left-to-right");
+    }, 600);
   }, []);
+
   return (
     <>
       <section className="intro">
@@ -143,18 +159,18 @@ export const Intro = () => {
             </div>
 
             <div className="intro__info">
-              <p className="intro__info__title">
+              <p className="intro__info__title" ref={titleRefMobile}>
                 <FormattedMessage
                   id="main.intro.title"
                   values={{ title: <span style={{ color: "#FFB800" }}>{title}</span> }}
                   dangerouslySetInnerHTML
                 />
               </p>
-              <p className="intro__info__description">
+              <p className="intro__info__description" ref={descriptionRefMobile}>
                 <FormattedMessage id="main.intro.text" />
                 {/* Поєднайте свої продукти з інноваційними рішеннями паковання. */}
               </p>
-              <div className="intro__info__button__container">
+              <div className="intro__info__button__container" ref={buttonRefMobile}>
                 <Button
                   title={<FormattedMessage id="button.order" />}
                   fontSize="1.1rem"

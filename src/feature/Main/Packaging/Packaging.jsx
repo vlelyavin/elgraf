@@ -20,7 +20,7 @@ export const Packaging = () => {
     { title: <FormattedMessage id="packaging.shoes" />, src: shoes, background: "#366BD0" },
     { title: <FormattedMessage id="packaging.alcoholGoods" />, src: alcoholgoods, background: "#366BD0" },
     {
-      title: <FormattedMessage id="packaging.other" />,
+      title: <FormattedMessage id="packaging.differentNeeds" />,
       src: other,
       background: "#6E9913",
     },

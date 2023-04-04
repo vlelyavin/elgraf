@@ -357,7 +357,7 @@ export const ProductList = () => {
             <p className="product__list__column__subheader">
               <FormattedMessage id="packing" />
             </p>
-            <h2 className="product__list__column__title">
+            <h2 className="product__list__column__title smaller">
               <FormattedMessage id="packaging.differentNeeds" />
               {/* Товарів для найрізноманітніших потреб */}
             </h2>

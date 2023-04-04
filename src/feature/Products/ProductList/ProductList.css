@@ -81,6 +81,10 @@
   width: 100%;
 }
 
+.smaller {
+  font-size: 1.2rem;
+}
+
 @media screen and (max-width: 1050px) {
   .product__list__column__button__container {
     display: none;
