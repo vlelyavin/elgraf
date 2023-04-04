@@ -32,7 +32,7 @@ export const Intro = () => {
     return () => clearInterval(intervalId);
   }, [currentSlide, interval, slides]);
   const locale = useSelector((state) => state.locale);
-  const [title, setTitle] = useState("ПАКУВАННЯ");
+  const [title, setTitle] = useState("ПАКОВАННЯ");
   useEffect(() => {
     if (locale === "us") {
       setTitle("PACKAGING");
