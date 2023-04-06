@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.21aa9964.css",
-    "main.js": "/elgraf/static/js/main.ae478883.js",
+    "main.css": "/elgraf/static/css/main.20fcfae0.css",
+    "main.js": "/elgraf/static/js/main.ac879745.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
     "static/media/2.png": "/elgraf/static/media/2.13c8f89afec5c355066f.png",
@@ -13,13 +13,13 @@
     "static/media/5.png": "/elgraf/static/media/5.f5f94037376b5fe42ab1.png",
     "static/media/slider__first.png": "/elgraf/static/media/slider__first.eb29f815842583521fdf.png",
     "static/media/tray.png": "/elgraf/static/media/tray.eb29f815842583521fdf.png",
-    "static/media/slider__second.png": "/elgraf/static/media/slider__second.3ab892c93948c6107e0d.png",
+    "static/media/slider__second.png": "/elgraf/static/media/slider__second.35488b8e0f3c090d0b68.png",
+    "static/media/slider__third.png": "/elgraf/static/media/slider__third.3e52ef2f584cf6652048.png",
     "static/media/childrengoods.svg": "/elgraf/static/media/childrengoods.19197df47d87983b9b813a16f9f355d3.svg",
     "static/media/Montserrat-VariableFont_wght.ttf": "/elgraf/static/media/Montserrat-VariableFont_wght.3faa3eef13649db02044.ttf",
     "static/media/production.png": "/elgraf/static/media/production.def7224c297d62102bb0.png",
     "static/media/14.png": "/elgraf/static/media/14.03617e76fcf5c825c32d.png",
     "static/media/elgraf.png": "/elgraf/static/media/elgraf.fe0b2a89ea969a4be49a.png",
-    "static/media/slider__third.png": "/elgraf/static/media/slider__third.c1d7e4b31226c0161a33.png",
     "static/media/7.png": "/elgraf/static/media/7.fe8f75682427e4c2e122.png",
     "static/media/clients.png": "/elgraf/static/media/clients.e783ff99c97c2d9747bc.png",
     "static/media/13.png": "/elgraf/static/media/13.7bed7fcbbe396189d4d1.png",
@@ -31,7 +31,7 @@
     "static/media/paintLab.png": "/elgraf/static/media/paintLab.84b9a108542235567d9e.png",
     "static/media/largeLogo.svg": "/elgraf/static/media/largeLogo.6f4450b73c8700f259ffa45dbe30bb75.svg",
     "static/media/15.png": "/elgraf/static/media/15.f4990f23d4baed6977b4.png",
-    "static/media/logo.svg": "/elgraf/static/media/logo.2f965d7e17fc15fd9a913cfd768cae63.svg",
+    "static/media/smallLogo.svg": "/elgraf/static/media/smallLogo.a2bda09fce79014fecca9a27463c0bbc.svg",
     "static/media/11.png": "/elgraf/static/media/11.0bbc797beaf69ab62ae2.png",
     "static/media/16.png": "/elgraf/static/media/16.aae3e5637ca8d61e8146.png",
     "static/media/raw.png": "/elgraf/static/media/raw.fff1ac28d70122d2ac7d.png",
@@ -77,11 +77,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.21aa9964.css.map": "/elgraf/static/css/main.21aa9964.css.map",
-    "main.ae478883.js.map": "/elgraf/static/js/main.ae478883.js.map"
+    "main.20fcfae0.css.map": "/elgraf/static/css/main.20fcfae0.css.map",
+    "main.ac879745.js.map": "/elgraf/static/js/main.ac879745.js.map"
   },
   "entrypoints": [
-    "static/css/main.21aa9964.css",
-    "static/js/main.ae478883.js"
+    "static/css/main.20fcfae0.css",
+    "static/js/main.ac879745.js"
   ]
 }
