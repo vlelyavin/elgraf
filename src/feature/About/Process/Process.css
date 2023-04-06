@@ -51,9 +51,6 @@
   .process {
     margin: 40px 0 0 0;
   }
-  .process__title {
-    display: none;
-  }
   .process__row {
     flex-direction: column;
     align-items: center;

@@ -26,7 +26,7 @@ export const MainProduct = () => {
       },
       {
         rootMargin: "0px",
-        threshold: 0, // 50% of the section must be visible
+        threshold: 0, 
       }
     );
 

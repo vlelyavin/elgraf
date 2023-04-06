@@ -11,8 +11,8 @@ import phoneIcon from "../../assets/images/header/phoneIcon.svg";
 import linkedinIcon from "../../assets/images/header/linkedinIcon.svg";
 import facebookIcon from "../../assets/images/header/facebookIcon.svg";
 import instagramIcon from "../../assets/images/header/instagramIcon.svg";
-import largeLogo from "../../assets/images/icons/largeLogo.svg";
-import logo from "../../assets/images/icons/logo.svg";
+import mobileHeaderLogo from "../../assets/images/logo/mobileHeaderLogo.svg";
+import smallLogo from "../../assets/images/logo/smallLogo.svg";
 import classNames from "classnames";
 
 import "./Header.css";
@@ -145,7 +145,7 @@ export const Header = () => {
                 className="header__nav__link"
               >
                 <div className="header__logo__container">
-                  <img src={largeLogo} alt="largeLogo" className="header__logo" />
+                  <img src={smallLogo} alt="smallLogo" className="header__logo" />
                 </div>
               </Link>
             </nav>
@@ -172,7 +172,7 @@ export const Header = () => {
       </header>
       <header className="header__mobile">
         <Link to={ROUTES.initial} className="header__mobile__logo__container" onClick={() => setActiveLink(4)}>
-          <img src={logo} alt="logo" className="header__mobile__logo" />
+          <img src={mobileHeaderLogo} alt="mobileHeaderLogo" className="header__mobile__logo" />
         </Link>
         <div className="header__right">
           <select className="header__locales menulocale" value={locale} onChange={handleValueChange}>

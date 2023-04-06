@@ -33,10 +33,10 @@
 .packaging__item::before {
   position: absolute;
   content: "";
-  top: 10px;
-  right: 10px;
-  width: 15px;
-  height: 15px;
+  top: 17px;
+  right: 17px;
+  width: 25px;
+  height: 25px;
   background: url("../../../assets/images/main/arrow.png") no-repeat center center / cover;
 }
 
@@ -70,11 +70,22 @@
   .packaging__title {
     font-size: 1.8rem;
     width: 280px;
+    margin: 30px 0 20px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .packaging__item {
     max-width: 100%;
+    height: auto;
+    padding: 30px 20px 20px;
+  }
+  .packaging__item__image__container {
+    width: 200px;
+    height: 200px;
+  }
+  .packaging__item__title {
+    font-size: 1.35rem;
+    height: auto;
   }
 }

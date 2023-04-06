@@ -1,4 +1,4 @@
-import largeLogo from "../../assets/images/icons/largeLogo.svg";
+import footerLogo from "../../assets/images/logo/footerLogo.png";
 import locationIcon from "../../assets/images/icons/locationIcon.svg";
 import mailIcon from "../../assets/images/icons/mailIcon.svg";
 import phoneIcon from "../../assets/images/icons/phoneIcon.svg";
@@ -34,7 +34,7 @@ export const Footer = () => {
       <footer className="footer">
         <div className="footer__column firstColumn">
           <div className="footer__logo__container">
-            <img src={largeLogo} alt="largeLogo" className="footer__logo" />
+            <img src={footerLogo} alt="footerLogo" className="footer__logo" />
           </div>
           <p className="footer__logo__description">
             <FormattedMessage id="footer.license" values={{ br: <br /> }} />

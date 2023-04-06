@@ -173,9 +173,10 @@ export const Intro = () => {
               <div className="intro__info__button__container" ref={buttonRefMobile}>
                 <Button
                   title={<FormattedMessage id="button.order" />}
-                  fontSize="1.1rem"
-                  padding="15px 40px"
+                  fontSize="0.9rem"
+                  padding="10px 40px"
                   width="100%"
+                  border="2px solid black"
                 />
               </div>
             </div>
