@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.20fcfae0.css",
-    "main.js": "/elgraf/static/js/main.ac879745.js",
+    "main.css": "/elgraf/static/css/main.8d1d7e50.css",
+    "main.js": "/elgraf/static/js/main.0bc49118.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
     "static/media/2.png": "/elgraf/static/media/2.13c8f89afec5c355066f.png",
@@ -29,7 +29,6 @@
     "static/media/productBackground.png": "/elgraf/static/media/productBackground.22844c62055f7fc4a698.png",
     "static/media/6.png": "/elgraf/static/media/6.7906e3daad9b6eae8b23.png",
     "static/media/paintLab.png": "/elgraf/static/media/paintLab.84b9a108542235567d9e.png",
-    "static/media/largeLogo.svg": "/elgraf/static/media/largeLogo.6f4450b73c8700f259ffa45dbe30bb75.svg",
     "static/media/15.png": "/elgraf/static/media/15.f4990f23d4baed6977b4.png",
     "static/media/smallLogo.svg": "/elgraf/static/media/smallLogo.a2bda09fce79014fecca9a27463c0bbc.svg",
     "static/media/11.png": "/elgraf/static/media/11.0bbc797beaf69ab62ae2.png",
@@ -54,6 +53,7 @@
     "static/media/alcoholgoods.png": "/elgraf/static/media/alcoholgoods.6ca33b646e0eebbad0b9.png",
     "static/media/transporting.png": "/elgraf/static/media/transporting.3827be2e06e15a69e74e.png",
     "static/media/exhibition.png": "/elgraf/static/media/exhibition.d909c35df53f611441cd.png",
+    "static/media/mobileHeaderLogo.svg": "/elgraf/static/media/mobileHeaderLogo.383bc7978bf3b15694ecdad12d873454.svg",
     "static/media/background.png": "/elgraf/static/media/background.318ba9fe43bf5b755f68.png",
     "static/media/instagramIcon.svg": "/elgraf/static/media/instagramIcon.74bc0e29f3e474bf957838bec6c5c207.svg",
     "static/media/slick.svg": "/elgraf/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -77,11 +77,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.20fcfae0.css.map": "/elgraf/static/css/main.20fcfae0.css.map",
-    "main.ac879745.js.map": "/elgraf/static/js/main.ac879745.js.map"
+    "main.8d1d7e50.css.map": "/elgraf/static/css/main.8d1d7e50.css.map",
+    "main.0bc49118.js.map": "/elgraf/static/js/main.0bc49118.js.map"
   },
   "entrypoints": [
-    "static/css/main.20fcfae0.css",
-    "static/js/main.ac879745.js"
+    "static/css/main.8d1d7e50.css",
+    "static/js/main.0bc49118.js"
   ]
 }
