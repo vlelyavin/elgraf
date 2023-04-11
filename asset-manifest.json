@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/elgraf/static/css/main.c890db95.css",
-    "main.js": "/elgraf/static/js/main.eeffdda7.js",
+    "main.css": "/elgraf/static/css/main.2e8b9810.css",
+    "main.js": "/elgraf/static/js/main.be031572.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
     "static/media/2.png": "/elgraf/static/media/2.13c8f89afec5c355066f.png",
@@ -11,7 +11,8 @@
     "static/media/product.png": "/elgraf/static/media/product.a83ef7044967224d351c.png",
     "static/media/9.png": "/elgraf/static/media/9.8ee56bcf8232c7aafa54.png",
     "static/media/5.png": "/elgraf/static/media/5.f5f94037376b5fe42ab1.png",
-    "static/media/clients.png": "/elgraf/static/media/clients.50d0655b90890c0e3d25.png",
+    "static/media/benefitsFirst.png": "/elgraf/static/media/benefitsFirst.8980caca873313c8b429.png",
+    "static/media/benefitsSecond.png": "/elgraf/static/media/benefitsSecond.3f717c62d7af893b679e.png",
     "static/media/slider__first.png": "/elgraf/static/media/slider__first.eb29f815842583521fdf.png",
     "static/media/tray.png": "/elgraf/static/media/tray.eb29f815842583521fdf.png",
     "static/media/slider__second.png": "/elgraf/static/media/slider__second.35488b8e0f3c090d0b68.png",
@@ -21,6 +22,7 @@
     "static/media/production.png": "/elgraf/static/media/production.def7224c297d62102bb0.png",
     "static/media/14.png": "/elgraf/static/media/14.03617e76fcf5c825c32d.png",
     "static/media/elgraf.png": "/elgraf/static/media/elgraf.fe0b2a89ea969a4be49a.png",
+    "static/media/clients.png": "/elgraf/static/media/clients.c74e04a5cdc94d8417cc.png",
     "static/media/7.png": "/elgraf/static/media/7.fe8f75682427e4c2e122.png",
     "static/media/13.png": "/elgraf/static/media/13.7bed7fcbbe396189d4d1.png",
     "static/media/8.png": "/elgraf/static/media/8.b10822a7b6991c3e94c5.png",
@@ -41,11 +43,9 @@
     "static/media/lamination.png": "/elgraf/static/media/lamination.28d141957e8669a37ce8.png",
     "static/media/certificateISO.png": "/elgraf/static/media/certificateISO.9c160df9abc297d45bb5.png",
     "static/media/differentNeeds.png": "/elgraf/static/media/differentNeeds.573a413b24d479d5f89c.png",
-    "static/media/benefitsSecond.png": "/elgraf/static/media/benefitsSecond.74e8ebf7b2df3f4a8ad3.png",
     "static/media/paintLabMobile.png": "/elgraf/static/media/paintLabMobile.401d162f82434fcd1c90.png",
     "static/media/shoes.png": "/elgraf/static/media/shoes.5cc7f2c9098c0542caab.png",
     "static/media/rawMobile.png": "/elgraf/static/media/rawMobile.fed3cb605c4659e20e30.png",
-    "static/media/benefitsFirst.png": "/elgraf/static/media/benefitsFirst.38d7e2bbdc0584e1db8f.png",
     "static/media/stampingFormsMobile.png": "/elgraf/static/media/stampingFormsMobile.5d212eb83205f6f3b242.png",
     "static/media/aboutBackground.png": "/elgraf/static/media/aboutBackground.aa52df5ec2f26c7f54b8.png",
     "static/media/industrialgoods.png": "/elgraf/static/media/industrialgoods.923d9704a7e13c3a39ad.png",
@@ -77,11 +77,11 @@
     "index.html": "/elgraf/index.html",
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
-    "main.c890db95.css.map": "/elgraf/static/css/main.c890db95.css.map",
-    "main.eeffdda7.js.map": "/elgraf/static/js/main.eeffdda7.js.map"
+    "main.2e8b9810.css.map": "/elgraf/static/css/main.2e8b9810.css.map",
+    "main.be031572.js.map": "/elgraf/static/js/main.be031572.js.map"
   },
   "entrypoints": [
-    "static/css/main.c890db95.css",
-    "static/js/main.eeffdda7.js"
+    "static/css/main.2e8b9810.css",
+    "static/js/main.be031572.js"
   ]
 }
