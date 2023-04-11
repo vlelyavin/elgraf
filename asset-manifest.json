@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/elgraf/static/css/main.2e8b9810.css",
-    "main.js": "/elgraf/static/js/main.be031572.js",
+    "main.js": "/elgraf/static/js/main.bf692404.js",
     "static/media/1.png": "/elgraf/static/media/1.e59c3e947bd0c8bf7939.png",
     "static/media/18.png": "/elgraf/static/media/18.d792adaa3a362c459bb2.png",
     "static/media/2.png": "/elgraf/static/media/2.13c8f89afec5c355066f.png",
@@ -11,8 +11,6 @@
     "static/media/product.png": "/elgraf/static/media/product.a83ef7044967224d351c.png",
     "static/media/9.png": "/elgraf/static/media/9.8ee56bcf8232c7aafa54.png",
     "static/media/5.png": "/elgraf/static/media/5.f5f94037376b5fe42ab1.png",
-    "static/media/benefitsFirst.png": "/elgraf/static/media/benefitsFirst.8980caca873313c8b429.png",
-    "static/media/benefitsSecond.png": "/elgraf/static/media/benefitsSecond.3f717c62d7af893b679e.png",
     "static/media/slider__first.png": "/elgraf/static/media/slider__first.eb29f815842583521fdf.png",
     "static/media/tray.png": "/elgraf/static/media/tray.eb29f815842583521fdf.png",
     "static/media/slider__second.png": "/elgraf/static/media/slider__second.35488b8e0f3c090d0b68.png",
@@ -38,6 +36,8 @@
     "static/media/raw.png": "/elgraf/static/media/raw.fff1ac28d70122d2ac7d.png",
     "static/media/stampingForms.png": "/elgraf/static/media/stampingForms.cdeb8ee3e02cb3bb6ce8.png",
     "static/media/certificate.png": "/elgraf/static/media/certificate.0f20793de541758cb328.png",
+    "static/media/benefitsSecond.png": "/elgraf/static/media/benefitsSecond.2004861c9c948128bc45.png",
+    "static/media/benefitsFirst.png": "/elgraf/static/media/benefitsFirst.f9b8b30f27713c7a03d0.png",
     "static/media/pressing.png": "/elgraf/static/media/pressing.3c17591612e272dd3a99.png",
     "static/media/congrev.png": "/elgraf/static/media/congrev.bbc54a856bc3194f218a.png",
     "static/media/lamination.png": "/elgraf/static/media/lamination.28d141957e8669a37ce8.png",
@@ -78,10 +78,10 @@
     "static/media/arrowRight.svg": "/elgraf/static/media/arrowRight.19159464cd2862619f3e001b5f113b8c.svg",
     "static/media/arrowLeft.svg": "/elgraf/static/media/arrowLeft.2beaee5dd8df0076ec96bd992994b1da.svg",
     "main.2e8b9810.css.map": "/elgraf/static/css/main.2e8b9810.css.map",
-    "main.be031572.js.map": "/elgraf/static/js/main.be031572.js.map"
+    "main.bf692404.js.map": "/elgraf/static/js/main.bf692404.js.map"
   },
   "entrypoints": [
     "static/css/main.2e8b9810.css",
-    "static/js/main.be031572.js"
+    "static/js/main.bf692404.js"
   ]
 }
