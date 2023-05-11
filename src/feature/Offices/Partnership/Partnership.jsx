@@ -137,7 +137,7 @@ export const Partnership = () => {
                 type="email"
                 value={values.email}
                 onChange={handleInputChange}
-                placeholder="E-mail"
+                placeholder="Email"
                 name="email"
                 style={{ border: errors.email ? "2px solid red" : "" }}
               />

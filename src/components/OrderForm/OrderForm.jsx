@@ -69,7 +69,7 @@ export const OrderForm = () => {
       errors.name = "Name is required";
     }
     if (!values.message.trim()) {
-      errors.message = "Name is required";
+      errors.message = "Message is required";
     }
     if (!values.email.trim()) {
       errors.email = "Email is required";
@@ -156,7 +156,7 @@ export const OrderForm = () => {
             />
             <div className="input__container">
               <Input
-                placeholder="Email"
+                placeholder="E-mail"
                 name="email"
                 value={values.email}
                 onChange={handleInputChange}

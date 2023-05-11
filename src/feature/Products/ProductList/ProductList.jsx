@@ -66,12 +66,12 @@ import bagInBoxImage12 from "../../../assets/images/products/bagInBox/12.png";
 import bagInBoxImage13 from "../../../assets/images/products/bagInBox/13.png";
 import bagInBoxImage14 from "../../../assets/images/products/bagInBox/14.png";
 
-import showBoxImage1 from "../../../assets/images/products/showBox/1.png";
+import showBoxImage1 from "../../../assets/images/products/showBox/6.png";
 import showBoxImage2 from "../../../assets/images/products/showBox/2.png";
 import showBoxImage3 from "../../../assets/images/products/showBox/3.png";
 import showBoxImage4 from "../../../assets/images/products/showBox/4.png";
 import showBoxImage5 from "../../../assets/images/products/showBox/5.png";
-import showBoxImage6 from "../../../assets/images/products/showBox/6.png";
+import showBoxImage6 from "../../../assets/images/products/showBox/1.png";
 import showBoxImage7 from "../../../assets/images/products/showBox/7.png";
 import showBoxImage8 from "../../../assets/images/products/showBox/8.png";
 import showBoxImage9 from "../../../assets/images/products/showBox/9.png";
@@ -355,7 +355,7 @@ export const ProductList = () => {
               <img src={differentNeedsImage} alt="differentNeedsImage" className="product__list__column__image" />
             </div>
             <p className="product__list__column__subheader">
-              <FormattedMessage id="packing" />
+              <FormattedMessage id="packing.for" />
             </p>
             <h2 className="product__list__column__title smaller">
               <FormattedMessage id="packaging.differentNeeds" />
@@ -422,7 +422,7 @@ export const ProductList = () => {
             </Slider>
 
             <p className="product__list__column__subheader">
-              <FormattedMessage id="packing" />
+              <FormattedMessage id="packing.for" />
             </p>
             <h2 className="product__list__column__title">
               <FormattedMessage id="packaging.exhibition&displays" />

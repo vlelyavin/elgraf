@@ -4,9 +4,12 @@ import { FormattedMessage } from "react-intl";
 import "./Menu.css";
 import { Button } from "../../../components/Button";
 import { useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { toggleOrderFormVisibility } from "../../../constants/actions";
 
 export const Menu = ({ isMenuVisible, activeLink, setActiveLink }) => {
   const menuRef = useRef();
+  const dispatch = useDispatch();
   useEffect(() => {
     if (isMenuVisible) {
       menuRef.current.style.transform = "translateY(0)";
@@ -43,14 +46,14 @@ export const Menu = ({ isMenuVisible, activeLink, setActiveLink }) => {
         </Link>
       </div>
       <div className="menu__lower">
-        <Link to={ROUTES.order} className="menu__button__container">
+        <div className="menu__button__container" onClick={() => dispatch(toggleOrderFormVisibility(true))}>
           <Button
             color="var(--primary)"
             background="var(--black)"
             width="250px"
             title={<FormattedMessage id="button.order" />}
           />
-        </Link>
+        </div>
       </div>
     </section>
   );

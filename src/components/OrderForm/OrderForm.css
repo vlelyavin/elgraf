@@ -109,6 +109,10 @@
   width: 250px;
 }
 
+.input__container {
+  position: relative;
+}
+
 .order__security::before {
   position: absolute;
   content: "";

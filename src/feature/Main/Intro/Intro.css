@@ -44,7 +44,7 @@
 
 .intro__slider {
   position: relative;
-  top: 100px;
+  top: 90px;
   overflow: hidden;
   max-width: 500px;
   width: 100%;
@@ -144,8 +144,8 @@
     color: var(--black);
     position: relative;
     gap: 10px;
-    height: 300px;
     padding: 0 20px;
+    margin: 30px 0;
   }
   .intro__benefit__title {
     display: flex;
@@ -198,5 +198,20 @@
   .intro__info__button__container {
     width: 100%;
     margin: 5px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro__info__button__container {
+    width: 100%;
+  }
+  .intro__info__description {
+    font-size: 1.3rem;
+    max-width: 380px;
+    width: 100%;
+  }
+  .intro__info {
+    max-width: unset;
+    width: 100%;
   }
 }

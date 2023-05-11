@@ -53,7 +53,7 @@ export const Agencies = () => {
                 <FormattedMessage id="offices.agencies.representative" />
               </p>
               <p className="agencies__column__block__text doublelocation">
-                <FormattedMessage id="inKyiv" />
+                <FormattedMessage id="inSwitzerland" />
               </p>
             </div>
             <div className="agencies__column__block">
@@ -82,7 +82,7 @@ export const Agencies = () => {
                 <FormattedMessage id="offices.agencies.representative" />
               </p>
               <p className="agencies__column__block__text doublelocation">
-                <FormattedMessage id="inPoland" />
+                <FormattedMessage id="inAustria" />
               </p>
             </div>
             <div className="agencies__column__block">

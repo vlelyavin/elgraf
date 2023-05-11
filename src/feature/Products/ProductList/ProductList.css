@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: flex-end;
   background: var(--primary);
-  height: 420px;
+  height: 450px;
   transition: 0.3s;
 }
 
@@ -32,7 +32,7 @@
 
 .product__list__column__image__container {
   width: 250px;
-  height: 230px;
+  height: 220px;
 }
 
 .product__list__column__image {
@@ -111,7 +111,7 @@
     height: 0;
   }
   .product__list__column__image__container {
-    width: 100%;
+    width: 300px;
   }
   .product__list {
     padding: 100px 0 0 0;
