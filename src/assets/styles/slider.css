@@ -154,17 +154,17 @@
   justify-content: center;
   align-items: center;
   width: 200px !important;
-  height: 200px !important;
+  height: 180px !important;
 }
 
 .packaging__items .slick-track {
-  height: 200px;
+  height: 180px;
 }
 
 .packaging__items .slick-slide div {
   margin: 0 auto;
-  width: 200px !important;
-  height: 200px !important;
+  width: 180px !important;
+  height: 180px !important;
   display: flex;
   justify-content: center;
   align-items: center;

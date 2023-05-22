@@ -202,7 +202,7 @@ export const ProductList = () => {
 
   return (
     <>
-      {isSliderVisible && images.length > 0 && (
+      {window.innerWidth > 800 && isSliderVisible && images.length > 0 && (
         <LargeSlider images={images} closeSlider={closeSlider} settings={settings} />
       )}
       <section className="product__list">
