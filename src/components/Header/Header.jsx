@@ -97,17 +97,23 @@ export const Header = () => {
             </div>
             <p className="header__info__item__line__text">+38 (032) 245-84-44 / +38 (050) 372-00-96</p>
           </div>
-          {/* <div className="header__info__item">
-            <div className="header__info__item__line__icon__container">
+          <div className="header__info__item">
+            <a
+              href="https://www.linkedin.com/company/elgraf-ltd/"
+              className="header__info__item__line__icon__container"
+            >
               <img src={linkedinIcon} alt="linkedinIcon" className="header__info__item__line__icon" />
-            </div>
-            <div className="header__info__item__line__icon__container">
+            </a>
+            <a href="https://www.facebook.com/elgraf.package/" className="header__info__item__line__icon__container">
               <img src={facebookIcon} alt="facebookIcon" className="header__info__item__line__icon" />
-            </div>
-            <div className="header__info__item__line__icon__container">
+            </a>
+            <a
+              href="https://www.instagram.com/elgraf_cardboard_package/?hl=en"
+              className="header__info__item__line__icon__container"
+            >
               <img src={instagramIcon} alt="instagramIcon" className="header__info__item__line__icon" />
-            </div>
-          </div> */}
+            </a>
+          </div>
         </div>
       </Container>
       <header className={classNames("header", { stickToTop: scrollPosition > 0 ? true : false })}>

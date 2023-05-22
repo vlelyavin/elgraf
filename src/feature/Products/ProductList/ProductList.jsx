@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { Container } from "../../../components/Container";
 import differentNeedsImage from "../../../assets/images/products/differentNeeds.png";
@@ -87,6 +87,7 @@ import showBoxImage18 from "../../../assets/images/products/showBox/18.png";
 import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
 import { toggleOrderFormVisibility } from "../../../constants/actions";
+import { LargeSlider } from "../LargeSlider";
 
 function CustomPrevArrow(props) {
   const { className, onClick } = props;
@@ -186,268 +187,296 @@ export const ProductList = () => {
 
   const childrenGoodsImages = [childrenGoodsImage1, childrenGoodsImage2, childrenGoodsImage3];
 
+  const [isSliderVisible, toggleSliderVisibility] = useState(false);
+  const [images, setImages] = useState([]);
+
+  const expandSlider = (images) => {
+    setImages(images);
+    toggleSliderVisibility(true);
+  };
+
+  const closeSlider = () => {
+    toggleSliderVisibility(false);
+    setImages([]);
+  };
+
   return (
-    <section className="product__list">
-      <Container>
-        <div className="product__list__row">
-          <div className="product__list__column">
-            <Slider {...settings}>
-              {industrialGoodsImages.map((image, id) => (
-                <img key={id} src={image} alt="industrialGoodsImage" />
-              ))}
-            </Slider>
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title">
-              <FormattedMessage id="packaging.industrialGoods" />
-              {/* Промислових виробів */}
-            </h2>
+    <>
+      {isSliderVisible && images.length > 0 && (
+        <LargeSlider images={images} closeSlider={closeSlider} settings={settings} />
+      )}
+      <section className="product__list">
+        <Container>
+          <div className="product__list__row">
+            <div className="product__list__column">
+              <Slider {...settings}>
+                {industrialGoodsImages.map((image, id) => (
+                  <img
+                    key={id}
+                    src={image}
+                    alt="industrialGoodsImage"
+                    onClick={() => expandSlider(industrialGoodsImages)}
+                  />
+                ))}
+              </Slider>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title">
+                <FormattedMessage id="packaging.industrialGoods" />
+                {/* Промислових виробів */}
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
+            </div>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
-          </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
 
-          <div className="product__list__column">
-            <Slider {...settings} className="product__list__column__image__container">
-              {alcoholGoodsImages.map((image, id) => (
-                <img key={id} src={image} alt="alcoholGoodsImage" />
-              ))}
-            </Slider>
+            <div className="product__list__column">
+              <Slider {...settings} className="product__list__column__image__container">
+                {alcoholGoodsImages.map((image, id) => (
+                  <img key={id} src={image} alt="alcoholGoodsImage" onClick={() => expandSlider(alcoholGoodsImages)} />
+                ))}
+              </Slider>
 
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title">
-              <FormattedMessage id="packaging.alcoholGoods" />
-              {/* Алкогольних напоїв */}
-            </h2>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title">
+                <FormattedMessage id="packaging.alcoholGoods" />
+                {/* Алкогольних напоїв */}
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
+            </div>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
-          </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
 
-          <div className="product__list__column">
-            <Slider {...settings} className="product__list__column__image__container">
-              {transportingImages.map((image, id) => (
-                <img key={id} src={image} alt="transportingImage" />
-              ))}
-            </Slider>
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title">
-              <FormattedMessage id="packaging.transport&trays" />
-            </h2>
+            <div className="product__list__column">
+              <Slider {...settings} className="product__list__column__image__container">
+                {transportingImages.map((image, id) => (
+                  <img key={id} src={image} alt="transportingImage" onClick={() => expandSlider(transportingImages)} />
+                ))}
+              </Slider>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title">
+                <FormattedMessage id="packaging.transport&trays" />
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
+            </div>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
           </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
-        </div>
 
-        <div className="product__list__row">
-          <div className="product__list__column">
-            <Slider {...settings} className="product__list__column__image__container">
-              {childrenGoodsImages.map((image, id) => (
-                <img key={id} src={image} alt="childrenGoodsImage" />
-              ))}
-            </Slider>
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title">
-              <FormattedMessage id="packaging.childrenGoods" />
-              {/* Дитячих товарів */}
-            </h2>
+          <div className="product__list__row">
+            <div className="product__list__column">
+              <Slider {...settings} className="product__list__column__image__container">
+                {childrenGoodsImages.map((image, id) => (
+                  <img
+                    key={id}
+                    src={image}
+                    alt="childrenGoodsImage"
+                    onClick={() => expandSlider(childrenGoodsImages)}
+                  />
+                ))}
+              </Slider>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title">
+                <FormattedMessage id="packaging.childrenGoods" />
+                {/* Дитячих товарів */}
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
+            </div>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
-          </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
 
-          <div className="product__list__column">
-            <div className="product__list__column__image__container">
-              <img src={shoesImage} alt="alcoholGoodsImage" className="product__list__column__image" />
+            <div className="product__list__column">
+              <div className="product__list__column__image__container">
+                <img src={shoesImage} alt="alcoholGoodsImage" className="product__list__column__image" />
+              </div>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title">
+                <FormattedMessage id="packaging.shoes" />
+                {/* Взуття */}
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
             </div>
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title">
-              <FormattedMessage id="packaging.shoes" />
-              {/* Взуття */}
-            </h2>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
-          </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
 
-          <div className="product__list__column">
-            <div className="product__list__column__image__container">
-              <img src={differentNeedsImage} alt="differentNeedsImage" className="product__list__column__image" />
+            <div className="product__list__column">
+              <div className="product__list__column__image__container">
+                <img src={differentNeedsImage} alt="differentNeedsImage" className="product__list__column__image" />
+              </div>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title smaller">
+                <FormattedMessage id="packaging.differentNeeds" />
+                {/* Товарів для найрізноманітніших потреб */}
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
             </div>
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title smaller">
-              <FormattedMessage id="packaging.differentNeeds" />
-              {/* Товарів для найрізноманітніших потреб */}
-            </h2>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
           </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
-        </div>
 
-        <div className="product__list__row">
-          <div className="product__list__column">
-            <Slider {...settings} className="product__list__column__image__container">
-              {bagInBoxImages.map((image, id) => (
-                <img key={id} src={image} alt="bagInBoxImage" />
-              ))}
-            </Slider>
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title">
-              <FormattedMessage id="packaging.foodProducts" />
-              {/* Харчових продуктів */}
-            </h2>
+          <div className="product__list__row">
+            <div className="product__list__column">
+              <Slider {...settings} className="product__list__column__image__container">
+                {bagInBoxImages.map((image, id) => (
+                  <img key={id} src={image} alt="bagInBoxImage" onClick={() => expandSlider(bagInBoxImages)} />
+                ))}
+              </Slider>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title">
+                <FormattedMessage id="packaging.foodProducts" />
+                {/* Харчових продуктів */}
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
+            </div>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
-          </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
 
-          <div className="product__list__column">
-            <Slider {...settings} className="product__list__column__image__container">
-              {showBoxImages.map((image, id) => (
-                <img key={id} src={image} alt="showBoxImage" />
-              ))}
-            </Slider>
+            <div className="product__list__column">
+              <Slider {...settings} className="product__list__column__image__container">
+                {showBoxImages.map((image, id) => (
+                  <img key={id} src={image} alt="showBoxImage" onClick={() => expandSlider(showBoxImages)} />
+                ))}
+              </Slider>
 
-            <p className="product__list__column__subheader">
-              <FormattedMessage id="packing.for" />
-            </p>
-            <h2 className="product__list__column__title">
-              <FormattedMessage id="packaging.exhibition&displays" />
-              {/* Виставкова (дисплеї), ShowBox */}
-            </h2>
+              <p className="product__list__column__subheader">
+                <FormattedMessage id="packing.for" />
+              </p>
+              <h2 className="product__list__column__title">
+                <FormattedMessage id="packaging.exhibition&displays" />
+                {/* Виставкова (дисплеї), ShowBox */}
+              </h2>
+              <div
+                onClick={() => dispatch(toggleOrderFormVisibility(true))}
+                className="product__list__column__button__container"
+              >
+                <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              </div>
+            </div>
             <div
               onClick={() => dispatch(toggleOrderFormVisibility(true))}
-              className="product__list__column__button__container"
+              className="product__list__column__button__container__mobile"
             >
-              <Button title={<FormattedMessage id="button.order" />} background="var(--secondary)" width="100%" />
+              <Button
+                title={<FormattedMessage id="button.order" />}
+                background="var(--black)"
+                color="var(--primary)"
+                width="100%"
+              />
             </div>
           </div>
-          <div
-            onClick={() => dispatch(toggleOrderFormVisibility(true))}
-            className="product__list__column__button__container__mobile"
-          >
-            <Button
-              title={<FormattedMessage id="button.order" />}
-              background="var(--black)"
-              color="var(--primary)"
-              width="100%"
-            />
-          </div>
-        </div>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </>
   );
 };

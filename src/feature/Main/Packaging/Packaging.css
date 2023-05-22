@@ -26,7 +26,6 @@
   justify-content: flex-end;
   text-align: center;
   padding: 0 20px 15px;
-  gap: 15px;
   transition: 0.3s;
 }
 
@@ -80,10 +79,7 @@
     height: auto;
     padding: 30px 20px 20px;
   }
-  .packaging__item__image__container {
-    width: 200px;
-    height: 200px;
-  }
+
   .packaging__item__title {
     font-size: 1.35rem;
     height: auto;

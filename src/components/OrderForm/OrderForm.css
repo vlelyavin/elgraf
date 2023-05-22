@@ -33,6 +33,10 @@
   font-size: 0.9rem;
 }
 
+.order__button__container {
+  width: 250px;
+}
+
 .order__close__button {
   position: absolute;
   top: 54px;
@@ -40,9 +44,6 @@
   width: 28px;
   height: 28px;
   object-fit: cover;
-}
-.order__button__container {
-  width: 250px;
 }
 
 .order__close__button__line {
